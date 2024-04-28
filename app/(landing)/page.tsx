@@ -1,11 +1,27 @@
-import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import {
+	NavigationMenuItem,
+	NavigationMenuLink,
+} from '@/components/ui/navigation-menu';
+import Link from 'next/link';
 
 const LandingPage = () => {
 	return (
-		<div>
-			<h1>Hello, world! LandingPage</h1>
-			<Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-		</div>
+		<>
+			<div>
+				<h1>Hello, world! LandingPage</h1>
+
+				<div>
+					<Link href='/sign-in'>
+						<Button>Login</Button>
+					</Link>
+
+					<Link href='/sign-up'>
+						<Button>Register</Button>
+					</Link>
+				</div>
+			</div>
+		</>
 	);
 };
 export default LandingPage;

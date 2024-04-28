@@ -1,10 +1,9 @@
-import Image from 'next/image';
-
+import { UserButton } from '@clerk/nextjs';
 const DashboardPage = () => {
 	return (
 		<div>
 			<h1>Hello, world! DashboardPage </h1>
-			<Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
+			<UserButton afterSignOutUrl='/' />
 		</div>
 	);
 };
