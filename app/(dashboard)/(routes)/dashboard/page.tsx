@@ -1,0 +1,11 @@
+import Image from 'next/image';
+
+const DashboardPage = () => {
+	return (
+		<div>
+			<h1>Hello, world! DashboardPage </h1>
+			<Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
+		</div>
+	);
+};
+export default DashboardPage;
