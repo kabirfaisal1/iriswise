@@ -5,6 +5,17 @@
 html,
 body :root {
 	height: 100%;
+	background-image: radial-gradient(
+			at 27% 37%,
+			hsla(215, 98%, 61%, 1) 0px,
+			transparent 0%
+		),
+		radial-gradient(at 97% 21%, rgb(245, 191, 246) 0px, transparent 50%),
+		radial-gradient(at 52% 99%, rgb(248, 248, 248) 0px, transparent 50%),
+		radial-gradient(at 10% 29%, rgb(238, 163, 223) 0px, transparent 50%),
+		radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+		radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+		radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
 }
 
 @layer base {
@@ -78,4 +89,8 @@ body :root {
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+.round-yellow-shadow {
+	box-shadow: 0 0 10px 5px rgba(255, 255, 224, 0.5);
+	border-radius: 50%;
 }
