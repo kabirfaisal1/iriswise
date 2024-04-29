@@ -1,16 +1,14 @@
 import { UserButton } from '@clerk/nextjs';
-import { Button } from './ui/button';
-import { Menu, SettingsIcon } from 'lucide-react';
+import { SettingsIcon } from 'lucide-react';
 import Link from 'next/link';
 
 import { ModeToggle } from './light_darkmode';
+import MobileSidebar from './mobile-sidebar';
 
 const Navbar = () => {
 	return (
 		<div className='flex items-center justify-end p-4'>
-			<Button variant='ghost' size='icon' className='md:hidden'>
-				<Menu />
-			</Button>
+			<MobileSidebar />
 			<div className='text-sm group flex p-3 justify-start font-medium cursor-pointer'>
 				<div data-test='user_control' className='flex justify-end'>
 					<UserButton afterSignOutUrl='/' />

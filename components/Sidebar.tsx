@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Montserrat } from 'next/font/google';
 import { cn } from '../lib/utils';
 import {
-	BookMarked,
+	Newspaper,
 	ImageIcon,
 	LayoutDashboard,
 	MessageSquare,
@@ -16,10 +16,13 @@ import {
 	ShoppingBag,
 	Plane,
 } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+
 const montserrat = Montserrat({
 	weight: '600',
 	subsets: ['latin'],
 });
+
 const routes = [
 	{
 		id: '01',
@@ -37,24 +40,24 @@ const routes = [
 	},
 	{
 		id: '03',
-		label: 'AI Summarize',
-		icons: BookMarked,
-		href: '/aiSummarize',
-		color: 'text-green-700',
+		label: 'Article Summarize',
+		icons: Newspaper,
+		href: '/articleSummarize',
+		color: 'text-green-500',
 	},
 	{
 		id: '04',
 		label: 'Image Generation',
 		icons: ImageIcon,
 		href: '/imageGeneration',
-		color: 'text-pink-700',
+		color: 'text-pink-500',
 	},
 	{
 		id: '05',
 		label: 'Music Generation',
 		icons: MusicIcon,
 		href: '/musicGeneration',
-		color: 'text-yellow-700',
+		color: 'text-yellow-800',
 	},
 	{
 		id: '06',
@@ -93,6 +96,7 @@ const routes = [
 	// },
 ];
 const Sidebar = () => {
+	const pathname = usePathname();
 	return (
 		<div
 			className='space-y-4 py-4 flex flex-col h-full'
@@ -134,7 +138,11 @@ const Sidebar = () => {
 						<Link
 							href={route.href}
 							key={`${route.label}_${route.id}`}
-							className='text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-purple-900 hover:bg-green-200 rounded-full transition'
+							className={
+								cn(
+									'text-sm group flex p-2 w-full justify-start font-medium cursor-pointer hover:text-purple-900 hover:bg-green-200 rounded-full transition',
+								) + (pathname === route.href ? ' text-white' : '')
+							}
 							data-testid={`link_${route.label}`}
 						>
 							<div className='flex items-center flex-1'>
