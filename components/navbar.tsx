@@ -3,14 +3,16 @@ import { Button } from './ui/button';
 import { Menu, SettingsIcon } from 'lucide-react';
 import Link from 'next/link';
 
+import { ModeToggle } from './light_darkmode';
+
 const Navbar = () => {
 	return (
-		<div className='flex items-center p-4'>
+		<div className='flex items-center justify-end p-4'>
 			<Button variant='ghost' size='icon' className='md:hidden'>
 				<Menu />
 			</Button>
-			<div className='text-sm group flex p-3 w-full justify-start font-medium cursor-pointer'>
-				<div data-test='user_control' className='flex w-full justify-end'>
+			<div className='text-sm group flex p-3 justify-start font-medium cursor-pointer'>
+				<div data-test='user_control' className='flex justify-end'>
 					<UserButton afterSignOutUrl='/' />
 					<div className='text-sm flex p-3 justify-end font-medium cursor-pointer'>
 						<Link
@@ -20,6 +22,9 @@ const Navbar = () => {
 						>
 							<SettingsIcon />
 						</Link>
+						<div data-testid='mode_toggle'>
+							<ModeToggle />
+						</div>
 					</div>
 				</div>
 			</div>
