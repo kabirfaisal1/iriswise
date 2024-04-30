@@ -4,26 +4,43 @@
 
 html,
 body :root {
-	height: 100%;
-	background-image: radial-gradient(
-			at 27% 37%,
-			hsla(215, 98%, 61%, 1) 0px,
-			transparent 0%
-		),
-		radial-gradient(at 97% 21%, rgb(245, 191, 246) 0px, transparent 50%),
-		radial-gradient(at 52% 99%, rgb(248, 248, 248) 0px, transparent 50%),
-		radial-gradient(at 10% 29%, rgb(238, 163, 223) 0px, transparent 50%),
-		radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
-		radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-		radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+    height: 100%;
+    --body-bg: radial-gradient(
+            at 27% 37%,
+            hsla(215, 98%, 61%, 1) 0px,
+            transparent 0%
+        ),
+        radial-gradient(at 97% 21%, rgb(245, 191, 246) 0px, transparent 50%),
+        radial-gradient(at 52% 99%, rgb(248, 248, 248) 0px, transparent 50%),
+        radial-gradient(at 10% 29%, rgb(238, 163, 223) 0px, transparent 50%),
+        radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+        radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+        radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+    background-image: var(--body-bg);
+}
+
+.dark {
+    height: 100%;
+    --body-dark-bg: radial-gradient(
+            at 27% 37%,
+            hsla(306, 59%, 13%, 0.6) 0px,
+            transparent 0%
+        ),
+        radial-gradient(at 97% 21%, rgb(145, 91, 146) 0px, transparent 50%),
+        radial-gradient(at 52% 99%, rgb(148, 148, 148) 0px, transparent 50%),
+        radial-gradient(at 10% 29%, rgb(138, 83, 123) 0px, transparent 50%),
+        radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.6) 0px, transparent 50%),
+        radial-gradient(at 33% 50%, hsla(227, 16%, 11%, 0.6) 0px, transparent 50%),
+        radial-gradient(at 79% 53%, hsla(343, 41%, 40%, 0.6) 0px, transparent 50%);
+    background-image: var(--body-dark-bg);
 }
 
 @layer base {
 	:root {
-		--background: 0 0% 100%;
+		--background: var(--body-bg);
 		--foreground: 20 14.3% 4.1%;
 
-		--card: 0 0% 100%;
+		--card: var(--body-bg);
 		--card-foreground: 20 14.3% 4.1%;
 
 		--popover: 0 0% 100%;
@@ -52,10 +69,10 @@ body :root {
 	}
 
 	.dark {
-		--background: 210, 55%, 18%;
+		--background: var(--body--dark-bg);
 		--foreground: 60 9.1% 97.8%;
 
-		--card: 20 14.3% 4.1%;
+		--card: var(--body--dark-bg);
 		--card-foreground: 60 9.1% 97.8%;
 
 		--popover: 20 14.3% 4.1%;
