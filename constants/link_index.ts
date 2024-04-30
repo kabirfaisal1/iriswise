@@ -1,3 +1,5 @@
+
+// TODO: During clean up need to fix the coloring issue when importing from '@/constants/link_index'
 import
 {
     Newspaper,
@@ -18,6 +20,7 @@ export const SidebarRoutes = [ {
     icons: LayoutDashboard,
     href: '/dashboard',
     color: 'text-sky-500',
+
 },
 {
     id: '02',

@@ -12,8 +12,58 @@ import {
 	Newspaper,
 	VideoIcon,
 } from 'lucide-react';
-
 import { SystemToolsRoute } from '@/constants/link_index';
+// TODO: Need to fix the coloring issue import { SystemToolsRoute } from '@/constants/link_index'; and remove const SystemToolsRoute
+// const SystemToolsRoute = [
+// 	{
+// 		id: '02',
+// 		label: 'Conversation',
+// 		icons: MessageSquare,
+// 		href: '/conversation',
+// 		color: 'text-violet-500',
+// 		bgColor: 'bg-violet-600/10',
+// 	},
+// 	{
+// 		id: '03',
+// 		label: 'Article Summarize',
+// 		icons: Newspaper,
+// 		href: '/articleSummarize',
+// 		color: 'text-emerald-500',
+// 		bgColor: 'bg-emerald-700/10',
+// 	},
+// 	{
+// 		id: '04',
+// 		label: 'Image Generation',
+// 		icons: ImageIcon,
+// 		href: '/imageGeneration',
+// 		color: 'text-pink-500',
+// 		bgColor: 'bg-pink-500/10',
+// 	},
+// 	{
+// 		id: '05',
+// 		label: 'Music Generation',
+// 		icons: MusicIcon,
+// 		href: '/musicGeneration',
+// 		color: 'text-yellow-800',
+// 		bgColor: 'bg-yellow-500/10',
+// 	},
+// 	{
+// 		id: '06',
+// 		label: 'Video Generation',
+// 		icons: VideoIcon,
+// 		href: '/videoGeneration',
+// 		color: 'text-orange-700',
+// 		bgColor: 'bg-orange-500/10',
+// 	},
+// 	{
+// 		id: '07',
+// 		label: 'Code Generation',
+// 		icons: CodeIcon,
+// 		href: '/codeGeneration',
+// 		color: 'text-emerald-800',
+// 		bgColor: 'bg-emerald-500/10',
+// 	},
+// ];
 
 const DashboardPage = () => {
 	return (
@@ -46,9 +96,9 @@ const DashboardPage = () => {
 						className='p-4 m-2 border-black/5 flex items-center justify-evenly hover:shadow-md transition-all cursor-pointer w-full md:w-1/2 mx-auto'
 						data-testid={`${tool.label}_cards`}
 					>
-						<div className='flex items-center gap-x-5'>
+						<div className='flex items-center gap-x-4'>
 							<div className={cn('p-2 w-fit rounded-md', tool.color)}>
-								<tool.icons />
+								<tool.icons className={cn('w-8 h-8 ', tool.bgColor)} />
 							</div>
 							<CardHeader className='font-semibold'>{tool.label}</CardHeader>
 							<div>
