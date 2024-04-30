@@ -1,8 +1,4 @@
 import { Button } from '@/components/ui/button';
-import {
-	NavigationMenuItem,
-	NavigationMenuLink,
-} from '@/components/ui/navigation-menu';
 import Link from 'next/link';
 
 const LandingPage = () => {
