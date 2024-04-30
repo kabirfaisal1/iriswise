@@ -98,7 +98,7 @@ const routes = [
 const Sidebar = () => {
 	const pathname = usePathname();
 	return (
-		<div
+		<aside
 			className='space-y-4 py-4 flex flex-col h-full transition-all'
 			style={{
 				background:
@@ -153,7 +153,7 @@ const Sidebar = () => {
 					))}
 				</div>
 			</div>
-		</div>
+		</aside>
 	);
 };
 
