@@ -4,18 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Montserrat } from 'next/font/google';
 import { cn } from '../lib/utils';
-import {
-	Newspaper,
-	ImageIcon,
-	LayoutDashboard,
-	MessageSquare,
-	MusicIcon,
-	VideoIcon,
-	CodeIcon,
-	SettingsIcon,
-	ShoppingBag,
-	Plane,
-} from 'lucide-react';
+import { SidebarRoutes } from '../constants/link_index';
 import { usePathname } from 'next/navigation';
 
 const montserrat = Montserrat({
@@ -23,78 +12,6 @@ const montserrat = Montserrat({
 	subsets: ['latin'],
 });
 
-const routes = [
-	{
-		id: '01',
-		label: 'Dashboard',
-		icons: LayoutDashboard,
-		href: '/dashboard',
-		color: 'text-sky-500',
-	},
-	{
-		id: '02',
-		label: 'Conversation',
-		icons: MessageSquare,
-		href: '/conversation',
-		color: 'text-violet-500',
-	},
-	{
-		id: '03',
-		label: 'Article Summarize',
-		icons: Newspaper,
-		href: '/articleSummarize',
-		color: 'text-green-500',
-	},
-	{
-		id: '04',
-		label: 'Image Generation',
-		icons: ImageIcon,
-		href: '/imageGeneration',
-		color: 'text-pink-500',
-	},
-	{
-		id: '05',
-		label: 'Music Generation',
-		icons: MusicIcon,
-		href: '/musicGeneration',
-		color: 'text-yellow-800',
-	},
-	{
-		id: '06',
-		label: 'Video Generation',
-		icons: VideoIcon,
-		href: '/videoGeneration',
-		color: 'text-orange-700',
-	},
-	{
-		id: '07',
-		label: 'Code Generation',
-		icons: CodeIcon,
-		href: '/codeGeneration',
-		color: 'text-emerald-800',
-	},
-	// {
-	// 	id: '08',
-	// 	label: 'Price Checker',
-	// 	icons: ShoppingBag,
-	// 	href: '/priceChecker',
-	// 	color: 'text-emerald-800',
-	// },
-	// {
-	// 	id: '09',
-	// 	label: 'Travel Generation',
-	// 	icons: Plane,
-	// 	href: '/travel',
-	// 	color: 'text-emerald-800',
-	// },
-	// {
-	// 	id: '10',
-	// 	label: 'Settings',
-	// 	icons: SettingsIcon,
-	// 	href: '/settings',
-	// 	color: 'text-red-700',
-	// },
-];
 const Sidebar = () => {
 	const pathname = usePathname();
 	return (
@@ -106,6 +23,7 @@ const Sidebar = () => {
 			}}
 			data-testid='user_sidebar'
 		>
+			{/* // this is for the sidebar logo */}
 			<div className='px-8 py-6 flex-1'>
 				<Link
 					href='/dashboard'
@@ -132,9 +50,9 @@ const Sidebar = () => {
 						Iris
 					</h1>
 				</Link>
-
+				{/* // this is for the sidebar routes */}
 				<div className='space-y-1 mt-40 py-15 flex flex-col items-center space-x-1'>
-					{routes.map(route => (
+					{SidebarRoutes.map(route => (
 						<Link
 							href={route.href}
 							key={`${route.label}_${route.id}`}
