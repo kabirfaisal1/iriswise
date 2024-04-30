@@ -1,4 +1,6 @@
-const DashboardPage = () => {
+'use client';
+const DashboardPage = () =>
+{
 	return (
 		<div>
 			<div className='md-8 space-y-4'>
@@ -6,11 +8,15 @@ const DashboardPage = () => {
 					className='text-2xl md:text-4xl font-bold text-center'
 					data-testid='user_dashboard_header'
 				>
-					Explore the power of AI
+					Discover the Boundless <br className='md:hidden' /> Potential of AI
 				</h1>
-				<p>
-					Chat with our AI to get started. We can help you with anything you
-				</p>
+				<h3
+					className='text-muted-foreground font-light text-sm md:text-lg text-center'
+					data-testid='user_dashboard_subtitle'
+				>
+					Unleash the Future - <br className='md:hidden' /> Chat with our AI to
+					Begin Your Journey
+				</h3>
 			</div>
 		</div>
 	);
