@@ -6,20 +6,7 @@ import { Montserrat } from 'next/font/google';
 import { cn } from '../lib/utils';
 import { usePathname } from 'next/navigation';
 import { SidebarRoutes } from '@/constants/link_index';
-// TODO: enabled this incase colors are not working while importing from '@/constants/link_index'
-// import {
-// 	Newspaper,
-// 	ImageIcon,
-// 	LayoutDashboard,
-// 	MessageSquare,
-// 	MusicIcon,
-// 	VideoIcon,
-// 	CodeIcon,
-// 	SettingsIcon,
-// 	ShoppingBag,
-// 	Plane,
-// } from 'lucide-react';
-// export const SidebarRoutes = [
+
 // 	{
 // 		id: '01',
 // 		label: 'Dashboard',
