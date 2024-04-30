@@ -99,7 +99,7 @@ const Sidebar = () => {
 	const pathname = usePathname();
 	return (
 		<div
-			className='space-y-4 py-4 flex flex-col h-full'
+			className='space-y-4 py-4 flex flex-col h-full transition-all'
 			style={{
 				background:
 					'linear-gradient(0deg, #EDB7ED 10%, #430A5D 100%, #F6F5F2 100%)',
@@ -133,7 +133,7 @@ const Sidebar = () => {
 					</h1>
 				</Link>
 
-				<div className='space-y-1 m-8 justify-center space-x-1'>
+				<div className='space-y-1 mt-40 py-15 flex flex-col items-center space-x-1'>
 					{routes.map(route => (
 						<Link
 							href={route.href}
