@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 5173",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -30,6 +30,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "cypress": "^13.8.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "eslint-plugin-prettier": "^5.1.3",
