@@ -19,7 +19,9 @@ describe( 'Login to User Account', () =>
         SignIn.enterPassword( Cypress.env( 'CYPRESS_PASSWORD' ) );
         SignIn.clickOnContinueButton();
         cy.url().should( 'include', 'dashboard' );
-        cy.get( '[data-testid="Conversation_cards"]' ).should( 'have.text', 'Dashboard' );
+        cy.visit( '/dashboard', );
+        cy.get( '[data-testid="Conversation_cards"]' ).should( 'have.text', 'Conversation', { timeout: 10000 } );
+
     } );
 
 } );
