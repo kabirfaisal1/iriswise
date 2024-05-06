@@ -1,4 +1,4 @@
-import NavigationBar from '../../support/components/navigations/navigation';
+import NavigationBar from '../../support/pageComponents/navigations/navigation';
 
 const Navigation = new NavigationBar();
 describe( 'Verify Landing Page', () =>

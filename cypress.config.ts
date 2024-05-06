@@ -4,6 +4,7 @@ export default defineConfig( {
 
   e2e: {
     specPattern: "test/cypress/**/**/*.cy.{js,jsx,ts,tsx}",
+    downloadsFolder: "test/cypress/downloads",
 
     // src/test/cypress/e2e/spec.cy.ts
     screenshotOnRunFailure: false,

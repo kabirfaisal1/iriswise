@@ -1,5 +1,5 @@
-import Sidebar from '../../components/sidebar';
-import Navbar from '../../components/navbar';
+import Sidebar from '../../../components/sidebar';
+import Navbar from '../../../components/navbar';
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<div className='h-full relative'>
