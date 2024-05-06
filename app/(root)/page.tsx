@@ -5,7 +5,7 @@ const LandingPage = () => {
 	return (
 		<>
 			<div>
-				<h1 data-testid='landing_header_title'>Hello, world! LandingPage</h1>
+				<h1 data-testid='landing_header_title'>Hello, Home! LandingPage</h1>
 
 				<div className='text-sm flex p-3  mr-4 font-medium cursor-pointer'>
 					<Link className='mr-4' data_testid='login_button' href='/sign-in'>
