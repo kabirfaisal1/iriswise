@@ -1,5 +1,5 @@
-import NavigationBar from '../../support/components/navigations/navigation';
-import SignInPage from '../../support/components/sign_in/signin_in';
+import NavigationBar from '../../support/pageComponents/navigations/navigation';
+import SignInPage from '../../support/pageComponents/sign_in/signin_in';
 
 const Navigation = new NavigationBar();
 const SignIn = new SignInPage();
