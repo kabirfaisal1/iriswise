@@ -16,7 +16,7 @@ export default defineConfig( {
     {
       const version = config.env.version || 'local';
       const url = {
-        local: "http://localhost:5173/",
+        local: "http://localhost:5173",
         staging: "https://google.com",
         production: "https://amazon.com"
       };
