@@ -1,5 +1,3 @@
-
-// TODO: During clean up need to fix the coloring issue when importing from '@/constants/link_index'
 import
 {
     Newspaper,
@@ -9,148 +7,209 @@ import
     MusicIcon,
     VideoIcon,
     CodeIcon,
-    SettingsIcon,
-    ShoppingBag,
-    Plane,
+    SquareUser,
+    ScanBarcode
 } from 'lucide-react';
-// * this is for the sidebar while user in signed in
-export const SidebarRoutes = [ {
-    id: '01',
-    label: 'Dashboard',
-    icons: LayoutDashboard,
-    href: '/dashboard',
-    color: 'text-sky-500',
 
-},
-{
-    id: '02',
-    label: 'Conversation',
-    icons: MessageSquare,
-    href: '/conversation',
-    color: 'text-violet-500',
-},
-{
-    id: '03',
-    label: 'Article Summarize',
-    icons: Newspaper,
-    href: '/articleSummarize',
-    color: 'text-green-500',
-},
-{
-    id: '04',
-    label: 'Image Generation',
-    icons: ImageIcon,
-    href: '/imageGeneration',
-    color: 'text-pink-500',
-},
-{
-    id: '05',
-    label: 'Music Generation',
-    icons: MusicIcon,
-    href: '/musicGeneration',
-    color: 'text-yellow-800',
-},
-{
-    id: '06',
-    label: 'Video Generation',
-    icons: VideoIcon,
-    href: '/videoGeneration',
-    color: 'text-orange-700',
-},
-{
-    id: '07',
-    label: 'Code Generation',
-    icons: CodeIcon,
-    href: '/codeGeneration',
-    color: 'text-emerald-800',
-},
-    // {
-    // 	id: '08',
-    // 	label: 'Price Checker',
-    // 	icons: ShoppingBag,
-    // 	href: '/priceChecker',
-    // 	color: 'text-emerald-800',
-    // },
-    // {
-    // 	id: '09',
-    // 	label: 'Travel Generation',
-    // 	icons: Plane,
-    // 	href: '/travel',
-    // 	color: 'text-emerald-800',
-    // },
-    // {
-    // 	id: '10',
-    // 	label: 'Settings',
-    // 	icons: SettingsIcon,
-    // 	href: '/settings',
-    // 	color: 'text-red-700',
-    // },
+export const navLinks = [
+    {
+        label: "Home",
+        route: "/",
+        icon: LayoutDashboard,
+    },
+    {
+        label: "Conversation",
+        route: "/conversation",
+        icon: MessageSquare,
+    },
+    {
+        label: "Music Generation",
+        route: "/musicGeneration",
+        icon: MusicIcon,
+    },
+    {
+        label: "Image Generation",
+        route: "/imageGeneration",
+        icon: ImageIcon,
+    },
+    {
+        label: "Video Generation",
+        route: "/videoGeneration",
+        icon: VideoIcon,
+    },
+
+    {
+        label: "Article Summarizer",
+        route: "/articleSummarizer",
+        icon: Newspaper,
+    },
+
+
+    {
+        label: "Code Generation",
+        route: "/codeGeneration",
+        icon: CodeIcon,
+    },
+    {
+        label: "Profile",
+        route: "/profile",
+        icon: SquareUser,
+    },
+    {
+        label: "Buy Credits",
+        route: "/credits",
+        icon: ScanBarcode,
+    },
 
 ];
-// * this is for dashboard while user is not signed in
-export const SystemToolsRoute = [
+
+export const plans = [
     {
-        id: '02',
-        label: 'Conversation',
-        icons: MessageSquare,
-        href: '/conversation',
-        color: 'text-violet-500',
-        bgColor: 'bg-violet-500/10',
+        _id: 1,
+        name: "Free",
+        // icon: "/assets/icons/free-plan.svg",
+        price: 0,
+        credits: 20,
+        inclusions: [
+            {
+                label: "20 Free Credits",
+                isIncluded: true,
+            },
+            {
+                label: "Basic Access to Services",
+                isIncluded: true,
+            },
+            {
+                label: "Priority Customer Support",
+                isIncluded: false,
+            },
+            {
+                label: "Priority Updates",
+                isIncluded: false,
+            },
+        ],
     },
     {
-        id: '03',
-        label: 'Article Summarize',
-        icons: Newspaper,
-        href: '/articleSummarize',
-        color: 'text-green-500',
+        _id: 2,
+        name: "Pro Package",
+        // icon: "/assets/icons/free-plan.svg",
+        price: 40,
+        credits: 120,
+        inclusions: [
+            {
+                label: "120 Credits",
+                isIncluded: true,
+            },
+            {
+                label: "Full Access to Services",
+                isIncluded: true,
+            },
+            {
+                label: "Priority Customer Support",
+                isIncluded: true,
+            },
+            {
+                label: "Priority Updates",
+                isIncluded: false,
+            },
+        ],
     },
     {
-        id: '04',
-        label: 'Image Generation',
-        icons: ImageIcon,
-        href: '/imageGeneration',
-        color: 'text-pink-500',
+        _id: 3,
+        name: "Premium Package",
+        // icon: "/assets/icons/free-plan.svg",
+        price: 199,
+        credits: 2000,
+        inclusions: [
+            {
+                label: "2000 Credits",
+                isIncluded: true,
+            },
+            {
+                label: "Full Access to Services",
+                isIncluded: true,
+            },
+            {
+                label: "Priority Customer Support",
+                isIncluded: true,
+            },
+            {
+                label: "Priority Updates",
+                isIncluded: true,
+            },
+        ],
     },
-    {
-        id: '05',
-        label: 'Music Generation',
-        icons: MusicIcon,
-        href: '/musicGeneration',
-        color: 'text-yellow-800',
-    },
-    {
-        id: '06',
-        label: 'Video Generation',
-        icons: VideoIcon,
-        href: '/videoGeneration',
-        color: 'text-orange-700',
-    },
-    {
-        id: '07',
-        label: 'Code Generation',
-        icons: CodeIcon,
-        href: '/codeGeneration',
-        color: 'text-emerald-800',
-    },
-    // {
-    // 	id: '08',
-    // 	label: 'Price Checker',
-    // 	icons: ShoppingBag,
-    // 	href: '/priceChecker',
-    // 	color: 'text-emerald-800',
-    // },
-    // {
-    // 	id: '09',
-    // 	label: 'Travel Generation',
-    // 	icons: Plane,
-    // 	href: '/travel',
-    // 	color: 'text-emerald-800',
-    // },
-    // {
-    // 	id: '10',
-    // 	label: 'Settings',
-    // 	icons: SettingsIcon,
-    // 	href: '/settings',
-    // 	color: 'text-red-700',
-    // },
 ];
+
+export const transformationTypes = {
+    restore: {
+        type: "restore",
+        title: "Restore Image",
+        subTitle: "Refine images by removing noise and imperfections",
+        config: { restore: true },
+        // icon: "image.svg",
+    },
+    removeBackground: {
+        type: "removeBackground",
+        title: "Background Remove",
+        subTitle: "Removes the background of the image using AI",
+        config: { removeBackground: true },
+        // icon: "camera.svg",
+    },
+    fill: {
+        type: "fill",
+        title: "Generative Fill",
+        subTitle: "Enhance an image's dimensions using AI outpainting",
+        config: { fillBackground: true },
+        // icon: "stars.svg",
+    },
+    remove: {
+        type: "remove",
+        title: "Object Remove",
+        subTitle: "Identify and eliminate objects from images",
+        config: {
+            remove: { prompt: "", removeShadow: true, multiple: true },
+        },
+        // icon: "scan.svg",
+    },
+    recolor: {
+        type: "recolor",
+        title: "Object Recolor",
+        subTitle: "Identify and recolor objects from the image",
+        config: {
+            recolor: { prompt: "", to: "", multiple: true },
+        },
+        // icon: "filter.svg",
+    },
+};
+
+export const aspectRatioOptions = {
+    "1:1": {
+        aspectRatio: "1:1",
+        label: "Square (1:1)",
+        width: 1000,
+        height: 1000,
+    },
+    "3:4": {
+        aspectRatio: "3:4",
+        label: "Standard Portrait (3:4)",
+        width: 1000,
+        height: 1334,
+    },
+    "9:16": {
+        aspectRatio: "9:16",
+        label: "Phone Portrait (9:16)",
+        width: 1000,
+        height: 1778,
+    },
+};
+
+export const defaultValues = {
+    title: "",
+    aspectRatio: "",
+    color: "",
+    prompt: "",
+    publicId: "",
+};
+
+export const creditFee = -1;

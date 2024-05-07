@@ -7,9 +7,8 @@ describe( 'Login to User Account', () =>
 {
     beforeEach( () =>
     {
-        cy.visit( '/dashboard', );
-        // Navigation.verifyLandingPage();
-        // Navigation.clickOnLogin();
+        cy.visit( '/', );
+        Navigation.clickOnLogin();
     } );
 
     it( 'Sign-In to User Account', () =>
