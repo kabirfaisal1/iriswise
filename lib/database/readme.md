@@ -1,11 +1,13 @@
+
+![MongoDB Badge](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=plastic) 
+![Mongoose Badge](https://img.shields.io/badge/Mongoose-F04D35?logo=mongoosedotws&logoColor=fff&style=plastic)
+
 # Table of Contents
 - [Load environment variables](#load-environment-variables)
 - [Define the connection](#define-the-connection)
 - [Cache the connection](#cache-the-connection)
 - [Check if the connection is already established](#check-if-the-connection-is-already-established)
 - [Connect to the database](#connect-to-the-database)
-
-![MongoDB Badge](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=plastic) ![Mongoose Badge](https://img.shields.io/badge/Mongoose-F04D35?logo=mongoosedotws&logoColor=fff&style=plastic)
 
 # [Load environment variables](mongoose.ts#4)
 

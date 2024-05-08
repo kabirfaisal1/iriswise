@@ -1,25 +1,24 @@
 'use client';
 
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/index';
 import { navLinks } from '@/constants/link_index';
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Button } from '../ui/button';
 import { Menu } from 'lucide-react';
-import { ModeToggle } from './light_darkmode';
+import { ModeToggle, Button } from '@/components/index';
 import { useEffect, useState } from 'react';
 
 const MobileNav = () => {
 	const pathname = usePathname();
-		const [isMounted, setIsMounted] = useState(false);
+	const [isMounted, setIsMounted] = useState(false);
 
-		useEffect(() => {
-			setIsMounted(true);
-		}, []);
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
 
-		if (!isMounted) return null;
+	if (!isMounted) return null;
 
 	return (
 		<header className='header'>
