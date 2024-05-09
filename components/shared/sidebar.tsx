@@ -27,25 +27,29 @@ const Sidebar = () => {
 					<SignedIn>
 						<ul className='sidebar-nav_elements'>
 							{navLinks.slice(0, 7).map(link => {
-								const isActive = link.route === pathname;
+								{
+									if (!link.disable) {
+										const isActive = link.route === pathname;
 
-								return (
-									<li
-										key={link.route}
-										className={`sidebar-nav_element group ${
-											isActive
-												? 'bg-purple-gradient text-custom-green'
-												: 'text-custom-brown'
-										}`}
-									>
-										<Link className='sidebar-link' href={link.route}>
-											<div className='flex items-center flex-1'>
-												<link.icon />
-											</div>
-											{link.label}
-										</Link>
-									</li>
-								);
+										return (
+											<li
+												key={link.route}
+												className={`sidebar-nav_element group ${
+													isActive
+														? 'bg-purple-gradient text-custom-green'
+														: 'text-custom-brown'
+												}`}
+											>
+												<Link className='sidebar-link' href={link.route}>
+													<div className='flex items-center flex-1'>
+														<link.icon />
+													</div>
+													{link.label}
+												</Link>
+											</li>
+										);
+									}
+								}
 							})}
 						</ul>
 

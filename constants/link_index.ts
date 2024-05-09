@@ -16,32 +16,38 @@ export const navLinks = [
         label: "Home",
         route: "/",
         icon: LayoutDashboard,
+        disable: false,
     },
     {
         label: "Conversation",
         route: "/conversation",
         icon: MessageSquare,
+        disable: true,
     },
     {
         label: "Music Generation",
         route: "/musicGeneration",
         icon: MusicIcon,
+        disable: true,
     },
     {
         label: "Image Generation",
         route: "/imageGeneration",
         icon: ImageIcon,
+        disable: false,
     },
     {
         label: "Video Generation",
         route: "/videoGeneration",
         icon: VideoIcon,
+        disable: true,
     },
 
     {
         label: "Article Summarizer",
         route: "/articleSummarizer",
         icon: Newspaper,
+        disable: true,
     },
 
 
@@ -49,16 +55,19 @@ export const navLinks = [
         label: "Code Generation",
         route: "/codeGeneration",
         icon: CodeIcon,
+        disable: true,
     },
     {
         label: "Profile",
         route: "/profile",
         icon: SquareUser,
+        disable: false,
     },
     {
         label: "Buy Credits",
         route: "/credits",
         icon: ScanBarcode,
+        disable: false,
     },
 
 ];

@@ -57,23 +57,27 @@ const MobileNav = () => {
 								<ul className='header-nav_elements'>
 									{navLinks.map(link => {
 										const isActive = link.route === pathname;
+										if (!link.disable) {
+											const isActive = link.route === pathname;
 
-										return (
-											<li
-												className={`${isActive && 'gradient-text'} p-18 flex whitespace-nowrap text-dark-700`}
-												key={link.route}
-											>
-												<Link
-													className='sidebar-link cursor-pointer'
-													href={link.route}
+											return (
+												<li
+													key={link.route}
+													className={`sidebar-nav_element group ${
+														isActive
+															? 'bg-purple-gradient text-custom-green'
+															: 'text-custom-brown'
+													}`}
 												>
-													<div className='flex items-center flex-1'>
-														<link.icon />
-													</div>
-													{link.label}
-												</Link>
-											</li>
-										);
+													<Link className='sidebar-link' href={link.route}>
+														<div className='flex items-center flex-1'>
+															<link.icon />
+														</div>
+														{link.label}
+													</Link>
+												</li>
+											);
+										}
 									})}
 								</ul>
 							</>
