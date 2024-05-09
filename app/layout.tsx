@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { ThemeProvider } from '@/components/shared/theme-provider';
+import { ThemeProvider } from '@/components/ui/theme-provider';
 import { ClerkProvider } from '@clerk/nextjs';
 import { cn } from '@/lib/utils';
 import { IBM_Plex_Sans } from 'next/font/google';

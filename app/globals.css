@@ -344,7 +344,7 @@ body :root {
 
 	/* Sidebar Component */
 	.sidebar {
-		@apply hidden h-screen w-72  p-5 shadow-md shadow-purple-200/50 lg:flex;
+		@apply hidden h-auto w-72 p-5 shadow-md shadow-purple-200/50 lg:flex;
 	}
 
 	.sidebar-logo {
