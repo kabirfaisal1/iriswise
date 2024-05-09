@@ -130,5 +130,52 @@ export const connectToDatabase = async () =>
     return cached.conn;
 };
 ```
-<details>
+</details>
 </br>
+
+# Lets Look at Models
+<table align="center">
+<tr>
+<td>
+
+[Article Summarize Model](./models/readme/articleSummarizeModle.md) 
+</td>
+<td>
+
+[Code Model](./models/readme/codeModel.md) 
+</td>
+
+<td>
+
+[Conversation Model](./models/readme/conversationModel.md)
+</td>
+
+<td>
+
+[Image Model](./models/readme/imageModel.md) 
+</td>
+
+<td>
+
+[Jobs Model](./models/readme/jobsModel.md)
+</td>
+
+<td>
+
+[Video Model](./models/readme/videoModel.md)
+</td>
+</tr>
+
+<tr>
+<td>
+
+[User Model](./models/readme/userModel.md)
+</td>
+
+<td>
+
+[Transaction Model](./models/readme/transactionModel.md)
+
+</td>
+</tr>
+</table> 
