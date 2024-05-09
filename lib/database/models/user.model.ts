@@ -7,9 +7,9 @@ export interface IUser extends Document
     clerkId: string;
     email: string;
     username?: string;
-    photo?: string;
     firstName?: string;
     lastName?: string;
+    photo?: string;
     planId?: string;
     creditBalance?: number;
 }
@@ -31,13 +31,13 @@ const UserSchema = new Schema( {
         type: String,
         unique: true,
     },
-    photo: {
-        type: String,
-    },
     firstName: {
         type: String,
     },
     lastName: {
+        type: String,
+    },
+    photo: {
         type: String,
     },
     planId: {
