@@ -1,12 +1,12 @@
 # Transaction Model
-This markdown document explains the creation of a Mongoose model for an 'Transaction' in a MongoDB collection. It starts with the definition of an ITransaction interface in TypeScript, which outlines the expected properties of an Transaction document. Then, it describes the creation of a Mongoose schema that maps to the MongoDB collection and defines the shape of the documents. Finally, it checks if a Mongoose model named 'Transaction' has already been defined, and if not, it defines a new one using the TransactionSchema. This ensures the 'Transaction' model is defined only once to avoid errors.
+This markdown document explains the creation of a Mongoose model for an `'Transaction'` in a MongoDB collection. It starts with the definition of an `ITransaction` interface in TypeScript, which outlines the expected properties of an Transaction document. Then, it describes the creation of a Mongoose schema that maps to the MongoDB collection and defines the shape of the documents. Finally, it checks if a Mongoose model named `'Transaction'` has already been defined, and if not, it defines a new one using the `TransactionSchema`. This ensures the `'Transaction'` model is defined only once to avoid errors.
 
 # Table of Contents
 - [Define the Transaction interface](#define-the-transaction-interface)
 - [Define the Transaction schema](#define-the-transaction-schema)
 - [Define the Transaction model/constructor](#define-the-transaction-modelconstructor)
 
-# [Define the Transaction interface](../Transaction.model.ts)
+# [Define the Transaction interface](../transaction.model.ts)
 
 In this interface:
 
@@ -31,7 +31,7 @@ interface ITransaction extends Document {
 </details>
 </br>
 
-# [Define the Transaction schema](../Transaction.model.ts)
+# [Define the Transaction schema](../transaction.model.ts)
 
 Defining Mongoose schema for a MongoDB collection. Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. A schema in Mongoose is a structure that defines the shape of the documents within a MongoDB collection.
 
@@ -78,7 +78,7 @@ const TransactionSchema = new Schema({
 </details>
 </br>
 
-# [Define the Transaction model/constructor](../Transaction.model.ts)
+# [Define the Transaction model/constructor](../transaction.model.ts)
 Checking if a Mongoose model named 'Transaction' has already been defined. If it has, it uses the existing model. If it hasn't, it defines a new model using the `TransactionSchema` and assigns it to the `Transaction` constant.
 
 Here's a breakdown:

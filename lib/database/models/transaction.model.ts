@@ -1,7 +1,7 @@
 import { Schema, model, models, Types } from "mongoose";
 
 // Interface for the Transaction model
-interface ITransaction extends Document
+export interface ITransaction extends Document
 {
     createdAt?: Date;
     stripeId: string;

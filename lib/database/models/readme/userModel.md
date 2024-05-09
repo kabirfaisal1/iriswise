@@ -1,12 +1,12 @@
 # User Model
-This markdown document explains the creation of a Mongoose model for an 'User' in a MongoDB collection. It starts with the definition of an IUser interface in TypeScript, which outlines the expected properties of an User document. Then, it describes the creation of a Mongoose schema that maps to the MongoDB collection and defines the shape of the documents. Finally, it checks if a Mongoose model named 'User' has already been defined, and if not, it defines a new one using the UserSchema. This ensures the 'User' model is defined only once to avoid errors.
+This markdown document explains the creation of a Mongoose model for an `'User'` in a MongoDB collection. It starts with the definition of an `IUser` interface in TypeScript, which outlines the expected properties of an User document. Then, it describes the creation of a Mongoose schema that maps to the MongoDB collection and defines the shape of the documents. Finally, it checks if a Mongoose model named `'User'` has already been defined, and if not, it defines a new one using the `UserSchema`. This ensures the `'User'` model is defined only once to avoid errors.
 
 # Table of Contents
 - [Define the User interface](#define-the-user-interface)
 - [Define the User schema](#define-the-user-schema)
 - [Define the User model/constructor](#define-the-user-modelconstructor)
 
-# [Define the User interface](../User.model.ts)
+# [Define the User interface](../user.model.ts)
 
 In this interface:
 
@@ -35,7 +35,7 @@ export interface IUser extends Document
 </details>
 </br>
 
-# [Define the User schema](../User.model.ts)
+# [Define the User schema](../user.model.ts)
 Defining a Mongoose schema for a MongoDB collection. Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. A schema in Mongoose is a structure that defines the shape of the documents within a MongoDB collection.
 
 Here's a breakdown of what each line does:
@@ -89,8 +89,8 @@ const UserSchema = new Schema( {
 </details>
 </br>
 
-# [Define the User model/constructor](../User.model.ts)
-Checking if a Mongoose model named 'User' has already been defined. If it has, it uses the existing model. If it hasn't, it defines a new model using the `UserSchema` and assigns it to the `User` constant.
+# [Define the User model/constructor](../user.model.ts)
+Checking if a Mongoose model named `'User'` has already been defined. If it has, it uses the existing model. If it hasn't, it defines a new model using the `UserSchema` and assigns it to the `User` constant.
 
 Here's a breakdown:
 

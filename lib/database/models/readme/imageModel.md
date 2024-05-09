@@ -1,5 +1,5 @@
 # Image Model
-This markdown document explains the creation of a Mongoose model for an 'Image' in a MongoDB collection. It starts with the definition of an IImage interface in TypeScript, which outlines the expected properties of an image document. Then, it describes the creation of a Mongoose schema that maps to the MongoDB collection and defines the shape of the documents. Finally, it checks if a Mongoose model named 'Image' has already been defined, and if not, it defines a new one using the ImageSchema. This ensures the 'Image' model is defined only once to avoid errors.
+This markdown document explains the creation of a Mongoose model for an `'Image'` in a MongoDB collection. It starts with the definition of an `IImage` interface in TypeScript, which outlines the expected properties of an image document. Then, it describes the creation of a Mongoose schema that maps to the MongoDB collection and defines the shape of the documents. Finally, it checks if a Mongoose model named `'Image'` has already been defined, and if not, it defines a new one using the `ImageSchema`. This ensures the `'Image'` model is defined only once to avoid errors.
 
 # Table of Contents
 - [Define the Image interface](#define-the-image-interface)
@@ -55,13 +55,13 @@ Mongoose is a MongoDB object modeling tool designed to work in an asynchronous e
 
 Here's a breakdown of what each line does:
 
-* title, transformation, publicID, and secureUrl are required fields of type String and URL.
-* width and height are optional fields of type Number.
-* config is an optional field of type Object.
-* transformationURL is an optional field of type URL.
-* aspectRatio, color, and prompt are optional fields of type String.
-* author is a field that references a User document. Its type is Schema.Types.ObjectId, which is the type for unique document identifiers in MongoDB.
-* createdAt and updatedAt are fields of type Date. They have default values of the current date and time (Date.now).
+* `title`, `transformation`, `publicID`, and `secureUrl` are required fields of type `String` and URL.
+* `width` and `height` are optional fields of type `Number`.
+* `config `is an optional field of type `Object`.
+* `transformationURL` is an optional field of type `URL`.
+* `aspectRatio`, `color`, and `prompt` are optional fields of type `String`.
+* `author` is a field that references a `User` document. Its type is `Schema.Types.ObjectId`, which is the type for unique document identifiers in MongoDB.
+* `createdAt` and `updatedAt`are fields of type `Date`. They have default values of the current date and time `(Date.now)`.
 
 This schema can be used to create a Mongoose model, which can then be used to create, read, update, and delete documents in the MongoDB collection.
 
@@ -94,11 +94,11 @@ Checking if a Mongoose model named 'Image' has already been defined. If it has, 
 
 Here's a breakdown:
 
-* models?.Image uses optional chaining to access the 'Image' property of models. If models is null or undefined, this expression will evaluate to undefined rather than throwing an error.
-* || is the logical OR operator. If the left-hand side is truthy (i.e., exists), it will be returned. Otherwise, the right-hand side will be returned.
-* model('Image', ImageSchema) defines a new Mongoose model named 'Image' using the ImageSchema.
+* `models?.Image` uses optional chaining to access the `'Image'` property of models. If models is `null` or `undefined`, this expression will evaluate to undefined rather than throwing an `error`.
+* `||` is the logical OR operator. If the left-hand side is truthy (i.e., exists), it will be returned. Otherwise, the right-hand side will be returned.
+* `model('Image', ImageSchema)` defines a new Mongoose model named `'Image'` using the ImageSchema.
 
-So, in short, this line of code ensures that the 'Image' model is defined exactly once. This is important because Mongoose throws an error if you try to define a model with the same name more than once.
+So, in short, this line of code ensures that the `'Image'` model is defined exactly once. This is important because Mongoose throws an error if you try to define a model with the same name more than once.
 
 <details>
 <summary><strong>Click to See the code!</strong></summary>
