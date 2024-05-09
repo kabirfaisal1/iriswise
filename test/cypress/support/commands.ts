@@ -26,19 +26,20 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 //
 declare module 'cypress' {
-    interface Chainable<Subject = any> {
+    interface Chainable<Subject = any>
+    {
         loginToAuth0 (): Chainable<void>;
     }
 }
 
-Cypress.Commands.add( 'loginToAuth0' as keyof Cypress.Chainable, ( username: string, password: string ) => {
-    cy.visit( '/dashboard' );
-    cy.request( {
-        method: 'POST',
-        url: `http://localhost:5173/sign-in`,
-        body: {
-            username,
-            password,
-        },
-    } );
-});
+// Cypress.Commands.add( 'loginToAuth0' as keyof Cypress.Chainable, ( username: string, password: string ) => {
+//     cy.visit( '/dashboard' );
+//     cy.request( {
+//         method: 'POST',
+//         url: `http://localhost:5173/sign-in`,
+//         body: {
+//             username,
+//             password,
+//         },
+//     } );
+// });
