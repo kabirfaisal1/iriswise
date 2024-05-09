@@ -15,7 +15,7 @@ export default defineConfig( {
     setupNodeEvents ( on, config )
     {
       const version = config.env.version || 'local';
-      const url = {
+      const url: { [key: string]: string } = {
         local: "http://localhost:5173",
         staging: "https://google.com",
         production: "https://amazon.com"
