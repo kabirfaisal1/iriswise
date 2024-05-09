@@ -1,7 +1,7 @@
 'use client';
 
 import { Sheet, SheetContent, SheetTrigger } from '@/components/index';
-import { navLinks } from '@/constants/link_index';
+import { navLinks } from '@/constants';
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
