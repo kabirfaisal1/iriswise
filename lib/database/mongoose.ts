@@ -2,8 +2,8 @@ import mongoose, { Mongoose } from 'mongoose';
 
 
 // Load environment variables
-const MONGODB_URL = process.env.MONGODB_URL;
-const MONGO_DB_NAME = process.env.MONGO_DB_NAME;
+const MONGODB_URL = "mongodb+srv://kabirfaisal:545296807@irisdbai.vtwakvv.mongodb.net/?retryWrites=true&w=majority&appName=IrisDBAI";
+const MONGO_DB_NAME = 'IrisDBAI';
 
 // Define the connection
 interface MongooseConnection
@@ -27,7 +27,6 @@ if ( !cached )
 export const connectToDatabase = async () =>
 {
     if ( cached.conn ) return cached.conn;
-    console.log( 'Connecting to database', MONGODB_URL, 'DB_Name', MONGO_DB_NAME );
     if ( !MONGODB_URL ) throw new Error( 'Missing MONGODB_URL' );
 
     cached.promise =
