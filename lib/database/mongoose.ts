@@ -2,8 +2,8 @@ import mongoose, { Mongoose } from 'mongoose';
 
 
 // Load environment variables
-const MONGODB_URL = "mongodb+srv://kabirfaisal:545296807@irisdbai.vtwakvv.mongodb.net/?retryWrites=true&w=majority&appName=IrisDBAI";
-const MONGO_DB_NAME = 'IrisDBAI';
+const MONGODB_URL = process.env.MONGODB_URL;
+const MONGO_DB_NAME = process.env.MONGO_DB_NAME;
 
 // Define the connection
 interface MongooseConnection
