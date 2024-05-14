@@ -42,10 +42,7 @@ const MobileNav = () => {
 						<SheetTrigger>
 							<Menu width={32} height={32} className='cursor-pointer' />
 						</SheetTrigger>
-						<SheetContent
-							className='sheet-content sm:w-64'
-							style={{ background: '#809A6F' }}
-						>
+						<SheetContent className='sheet-content sm:w-64' id='sheetContent'>
 							<>
 								<Image
 									src='/assets/images/logo.png'
@@ -66,7 +63,7 @@ const MobileNav = () => {
 													className={`sidebar-nav_element group ${
 														isActive
 															? 'bg-purple-gradient text-custom-green'
-															: 'text-custom-brown'
+															: ''
 													}`}
 												>
 													<Link className='sidebar-link' href={link.route}>
