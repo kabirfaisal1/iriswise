@@ -76,14 +76,7 @@ export async function POST ( req: Request )
             photo: image_url,
         };
 
-        const newUser = await createUser( {
-            clerkId: id,
-            email: user.email,
-            username: user.username,
-            firstName: user.firstName || "", // Provide a default value for nullable property
-            lastName: user.lastName || "", // Provide a default value for nullable property
-            photo: user.photo,
-        } );
+        const newUser = await createUser( user as CreateUserParams );
 
         // Set public metadata
         if ( newUser )
@@ -103,17 +96,18 @@ export async function POST ( req: Request )
     {
         const { id, image_url, first_name, last_name, username } = evt.data;
 
-        const user = {
-            firstName: first_name || "", // Provide a default value for nullable property
-            lastName: last_name || "",
+        const user: UpdateUserParams = {
+            firstName: first_name!,
+            lastName: last_name!,
             username: username!,
-            photo: image_url,
+            photo: image_url!,
         };
 
         const updatedUser = await updateUser( id, user );
 
         return NextResponse.json( { message: "OK", user: updatedUser } );
     }
+
 
     // DELETE
     if ( eventType === "user.deleted" )

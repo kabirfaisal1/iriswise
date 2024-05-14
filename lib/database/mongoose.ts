@@ -1,8 +1,9 @@
 import mongoose, { Mongoose } from 'mongoose';
+import 'dotenv/config';
 
 
 // Load environment variables
-const MONGODB_URL = process.env.MONGODB_URL;
+const MONGODB_URL = process.env.MongoDB_URL;
 const MONGO_DB_NAME = process.env.MONGO_DB_NAME;
 
 // Define the connection
