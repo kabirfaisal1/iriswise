@@ -84,8 +84,8 @@ const Sidebar = () => {
 					<SignedOut>
 						<div className='text-sm flex p-3  mr-4 font-medium cursor-pointer'>
 							<UserButton afterSignOutUrl='/' />
-							<Link data_testid='login_button' className='mr-4' href='/sign-in'>
-								<Button>Login</Button>
+							<Link className='mr-4' href='/sign-in'>
+								<Button data_testid='login_button'>Login</Button>
 							</Link>
 
 							<Link className='mr-4' href='/sign-up'>
