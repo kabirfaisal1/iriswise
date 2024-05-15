@@ -5,8 +5,8 @@ const Dashboard = () => {
 	return (
 		<>
 			<Header
-				title='Dashboard Page title'
-				subtitle='Dashboard Page subtitle'
+				title='Dashboard'
+				subtitle='Explore the Power of AI'
 				testid='dashboard_page_header'
 				icon=<LayoutDashboard
 					color={'#5C8374'}
