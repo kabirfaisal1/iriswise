@@ -1,14 +1,15 @@
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import Header from '@/components/shared/header';
+import { Newspaper } from 'lucide-react';
 
 const ArticleSummarize = () => {
 	return (
 		<>
-			<div>
-				<h1 data-testid='landing_header_title'>
-					Hello, Home! ArticleSummarize
-				</h1>
-			</div>
+			<Header
+				title='Article Summarize Page title'
+				subtitle='Article Summarize Page subtitle'
+				testid='ArticleSummarize_page_header'
+				icon=<Newspaper color={'#005B41'} height={'60px'} width={'40px'} />
+			/>
 		</>
 	);
 };

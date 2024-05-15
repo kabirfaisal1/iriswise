@@ -1,14 +1,14 @@
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-
+import Header from '@/components/shared/header';
+import { VideoIcon } from 'lucide-react';
 const VideoGenerationPage = () => {
 	return (
 		<>
-			<div>
-				<h1 data-testid='landing_header_title'>
-					Hello, Home! VideoGenerationPage Page
-				</h1>
-			</div>
+			<Header
+				title='Video Generation Page title'
+				subtitle='Video Generation Page subtitle'
+				testid='VideoGeneration_page_header'
+				icon=<VideoIcon color='#662549' height={'60px'} width={'40px'} />
+			/>
 		</>
 	);
 };

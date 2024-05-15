@@ -28,7 +28,7 @@ const Sidebar = () => {
 						<ul className='sidebar-nav_elements'>
 							{navLinks.slice(0, 7).map(link => {
 								{
-									if (!link.disable) {
+									if (!link.isDisable) {
 										const isActive = link.route === pathname;
 
 										return (
@@ -40,7 +40,7 @@ const Sidebar = () => {
 											>
 												<Link className='sidebar-link' href={link.route}>
 													<div className='flex items-center flex-1'>
-														<link.icon />
+														<link.icon color={link.color} />
 													</div>
 													{link.label}
 												</Link>
@@ -64,7 +64,7 @@ const Sidebar = () => {
 									>
 										<Link className='sidebar-link' href={link.route}>
 											<div className='flex items-center flex-1'>
-												<link.icon />
+												<link.icon color={link.color} />
 											</div>
 											{link.label}
 										</Link>

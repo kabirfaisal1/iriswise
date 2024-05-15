@@ -1,9 +1,19 @@
+import Header from '@/components/shared/header';
+import { LayoutDashboard } from 'lucide-react';
+
 const Dashboard = () => {
 	return (
 		<>
-			<div>
-				<h1 data-testid='landing_header_title'>Dashboard Page</h1>
-			</div>
+			<Header
+				title='Dashboard Page title'
+				subtitle='Dashboard Page subtitle'
+				testid='dashboard_page_header'
+				icon=<LayoutDashboard
+					color={'#5C8374'}
+					height={'60px'}
+					width={'40px'}
+				/>
+			/>
 		</>
 	);
 };

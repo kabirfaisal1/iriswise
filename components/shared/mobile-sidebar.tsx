@@ -53,8 +53,7 @@ const MobileNav = () => {
 
 								<ul className='header-nav_elements'>
 									{navLinks.map(link => {
-										const isActive = link.route === pathname;
-										if (!link.disable) {
+										if (!link.isDisable) {
 											const isActive = link.route === pathname;
 
 											return (
@@ -68,7 +67,7 @@ const MobileNav = () => {
 												>
 													<Link className='sidebar-link' href={link.route}>
 														<div className='flex items-center flex-1'>
-															<link.icon />
+															<link.icon color={link.color} />
 														</div>
 														{link.label}
 													</Link>

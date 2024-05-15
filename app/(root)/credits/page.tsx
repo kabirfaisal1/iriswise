@@ -1,13 +1,16 @@
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import Header from '@/components/shared/header';
+import { ScanBarcode } from 'lucide-react';
 
-const CreditPage = () => {
+const CreditsPage = () => {
 	return (
 		<>
-			<div>
-				<h1 data-testid='landing_header_title'>Hello, Home! CreditPage</h1>
-			</div>
+			<Header
+				title='User Credits'
+				subtitle='User Credits Page subtitle'
+				testid='User_Credits_page_header'
+				icon=<ScanBarcode color={'#76885B'} height={'60px'} width={'40px'} />
+			/>
 		</>
 	);
 };
-export default CreditPage;
+export default CreditsPage;

@@ -24,7 +24,7 @@ export default function RootLayout({
 			<ClerkProvider appearance={{ variables: { colorPrimary: '#874CCC' } }}>
 				<html lang='en' suppressHydrationWarning>
 					<head>
-						<link rel='icon' href='/favicon.ico' />
+						<link rel='icon' href='/app/favicon.ico' />
 					</head>
 					<body className={cn('font-IBMPlex antialiased', IBMPlex.variable)}>
 						<main>
