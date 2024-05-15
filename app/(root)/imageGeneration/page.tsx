@@ -1,14 +1,14 @@
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-
+import Header from '@/components/shared/header';
+import { ImageIcon } from 'lucide-react';
 const ImageGenerationPage = () => {
 	return (
 		<>
-			<div>
-				<h1 data-testid='landing_header_title'>
-					Hello, Home! ImageGenerationPage Page
-				</h1>
-			</div>
+			<Header
+				title='Image Generation Page title'
+				subtitle='Image Generation Page subtitle'
+				testid='ImageGeneration_page_header'
+				icon=<ImageIcon color='pink' height={'60px'} width={'40px'} />
+			/>
 		</>
 	);
 };

@@ -1,13 +1,16 @@
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import Header from '@/components/shared/header';
+import { FileCode } from 'lucide-react';
 
-const CodeSummarize = () => {
+const CodeSummarizePage = () => {
 	return (
 		<>
-			<div>
-				<h1 data-testid='landing_header_title'>Hello, Home! CodeSummarize</h1>
-			</div>
+			<Header
+				title='Code Summarize Page title'
+				subtitle='Code Summarize Page subtitle'
+				testid='CodeSummarize_page_header'
+				icon=<FileCode color={'#D8D8D8'} height={'60px'} width={'40px'} />
+			/>
 		</>
 	);
 };
-export default CodeSummarize;
+export default CodeSummarizePage;

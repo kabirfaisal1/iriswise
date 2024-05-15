@@ -28,21 +28,19 @@ const Sidebar = () => {
 						<ul className='sidebar-nav_elements'>
 							{navLinks.slice(0, 7).map(link => {
 								{
-									if (!link.disable) {
+									if (!link.isDisable) {
 										const isActive = link.route === pathname;
 
 										return (
 											<li
 												key={link.route}
 												className={`sidebar-nav_element group ${
-													isActive
-														? 'bg-purple-gradient text-custom-green'
-														: 'text-custom-brown'
+													isActive ? 'bg-purple-gradient text-custom-green' : ''
 												}`}
 											>
 												<Link className='sidebar-link' href={link.route}>
 													<div className='flex items-center flex-1'>
-														<link.icon />
+														<link.icon color={link.color} />
 													</div>
 													{link.label}
 												</Link>
@@ -61,14 +59,12 @@ const Sidebar = () => {
 									<li
 										key={link.route}
 										className={`sidebar-nav_element group ${
-											isActive
-												? 'bg-purple-gradient text-custom-green'
-												: 'text-custom-brown'
+											isActive ? 'bg-purple-gradient text-custom-green' : ''
 										}`}
 									>
 										<Link className='sidebar-link' href={link.route}>
 											<div className='flex items-center flex-1'>
-												<link.icon />
+												<link.icon color={link.color} />
 											</div>
 											{link.label}
 										</Link>

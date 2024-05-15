@@ -1,17 +1,21 @@
 import
 {
     clerkMiddleware,
-    createRouteMatcher
+    createRouteMatcher,
+    ClerkMiddlewareAuth // Add this import statement
 } from '@clerk/nextjs/server';
+import { navLinks } from './constants';
 
-const isProtectedRoute = createRouteMatcher( [
-    '/dashboard(.*)',
-    '/forum(.*)',
-] );
+// This is storing all the routes from the navLinks array
+const routes = navLinks.map( link => link.route );
+// This is creating a route matcher function
+const isProtectedRoute = createRouteMatcher( routes );
 
 export default clerkMiddleware( ( auth, req ) =>
 {
     publicRoutes: [ '/', '/api/webhooks/clerk', '/api/webhooks/stripe' ];
+
+    if ( isProtectedRoute( req ) ) auth().protect();
 } );
 
 

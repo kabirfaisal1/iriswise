@@ -4,7 +4,7 @@ import
     ImageIcon,
     LayoutDashboard,
     MessageSquare,
-    MusicIcon,
+    AudioLines,
     VideoIcon,
     CodeIcon,
     SquareUser,
@@ -13,61 +13,68 @@ import
 
 export const navLinks = [
     {
-        label: "Home",
-        route: "/",
+        label: "Dashboard",
+        route: "/dashboard",
         icon: LayoutDashboard,
-        disable: false,
+        isDisable: false,
+        color: "#5C8374",
     },
     {
         label: "Conversation",
         route: "/conversation",
         icon: MessageSquare,
-        disable: true,
+        isDisable: false,
+        color: "#3EC70B",
     },
     {
-        label: "Music Generation",
-        route: "/musicGeneration",
-        icon: MusicIcon,
-        disable: true,
+        label: "Audio Generation",
+        route: "/audioGeneration",
+        icon: AudioLines,
+        isDisable: false,
+        color: "#7469B6",
     },
     {
         label: "Image Generation",
         route: "/imageGeneration",
         icon: ImageIcon,
-        disable: false,
+        isDisable: false,
+        color: "#F8B1A6",
     },
     {
         label: "Video Generation",
         route: "/videoGeneration",
         icon: VideoIcon,
-        disable: true,
+        isDisable: false,
+        color: "#662549",
     },
 
     {
         label: "Article Summarizer",
-        route: "/articleSummarizer",
+        route: "/articleSummarize",
         icon: Newspaper,
-        disable: true,
+        isDisable: false,
+        color: "#005B41",
     },
-
-
     {
         label: "Code Generation",
         route: "/codeGeneration",
         icon: CodeIcon,
-        disable: true,
+        isDisable: false,
+        color: "#D8D8D8",
     },
     {
         label: "Profile",
         route: "/profile",
         icon: SquareUser,
-        disable: false,
+        isDisable: false,
+        color: "#76549A",
     },
     {
         label: "Buy Credits",
         route: "/credits",
         icon: ScanBarcode,
-        disable: false,
+        isDisable: false,
+        color: "#76885B",
     },
 
 ];
@@ -82,11 +89,11 @@ export const plans = [
         inclusions: [
             {
                 label: "20 Free Credits",
-                isIncluded: true,
+                isIncluded: false,
             },
             {
                 label: "Basic Access to Services",
-                isIncluded: true,
+                isIncluded: false,
             },
             {
                 label: "Priority Customer Support",
@@ -107,15 +114,15 @@ export const plans = [
         inclusions: [
             {
                 label: "120 Credits",
-                isIncluded: true,
+                isIncluded: false,
             },
             {
                 label: "Full Access to Services",
-                isIncluded: true,
+                isIncluded: false,
             },
             {
                 label: "Priority Customer Support",
-                isIncluded: true,
+                isIncluded: false,
             },
             {
                 label: "Priority Updates",
@@ -132,19 +139,19 @@ export const plans = [
         inclusions: [
             {
                 label: "2000 Credits",
-                isIncluded: true,
+                isIncluded: false,
             },
             {
                 label: "Full Access to Services",
-                isIncluded: true,
+                isIncluded: false,
             },
             {
                 label: "Priority Customer Support",
-                isIncluded: true,
+                isIncluded: false,
             },
             {
                 label: "Priority Updates",
-                isIncluded: true,
+                isIncluded: false,
             },
         ],
     },
@@ -155,21 +162,21 @@ export const transformationTypes = {
         type: "restore",
         title: "Restore Image",
         subTitle: "Refine images by removing noise and imperfections",
-        config: { restore: true },
+        config: { restore: false },
         // icon: "image.svg",
     },
     removeBackground: {
         type: "removeBackground",
         title: "Background Remove",
         subTitle: "Removes the background of the image using AI",
-        config: { removeBackground: true },
+        config: { removeBackground: false },
         // icon: "camera.svg",
     },
     fill: {
         type: "fill",
         title: "Generative Fill",
         subTitle: "Enhance an image's dimensions using AI outpainting",
-        config: { fillBackground: true },
+        config: { fillBackground: false },
         // icon: "stars.svg",
     },
     remove: {
@@ -177,7 +184,7 @@ export const transformationTypes = {
         title: "Object Remove",
         subTitle: "Identify and eliminate objects from images",
         config: {
-            remove: { prompt: "", removeShadow: true, multiple: true },
+            remove: { prompt: "", removeShadow: false, multiple: false },
         },
         // icon: "scan.svg",
     },
@@ -186,7 +193,7 @@ export const transformationTypes = {
         title: "Object Recolor",
         subTitle: "Identify and recolor objects from the image",
         config: {
-            recolor: { prompt: "", to: "", multiple: true },
+            recolor: { prompt: "", to: "", multiple: false },
         },
         // icon: "filter.svg",
     },

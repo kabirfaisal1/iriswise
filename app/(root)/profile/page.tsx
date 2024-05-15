@@ -1,12 +1,15 @@
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import Header from '@/components/shared/header';
+import { SquareUser } from 'lucide-react';
 
 const ProfilePage = () => {
 	return (
 		<>
-			<div>
-				<h1 data-testid='landing_header_title'>Hello, Home! Profile Page</h1>
-			</div>
+			<Header
+				title='Profile Page title'
+				subtitle='Profile Page subtitle'
+				testid='Profile_page_header'
+				icon=<SquareUser color='#76549A' height={'60px'} width={'40px'} />
+			/>
 		</>
 	);
 };

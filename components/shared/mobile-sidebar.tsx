@@ -42,10 +42,7 @@ const MobileNav = () => {
 						<SheetTrigger>
 							<Menu width={32} height={32} className='cursor-pointer' />
 						</SheetTrigger>
-						<SheetContent
-							className='sheet-content sm:w-64'
-							style={{ background: '#809A6F' }}
-						>
+						<SheetContent className='sheet-content sm:w-64' id='sheetContent'>
 							<>
 								<Image
 									src='/assets/images/logo.png'
@@ -56,8 +53,7 @@ const MobileNav = () => {
 
 								<ul className='header-nav_elements'>
 									{navLinks.map(link => {
-										const isActive = link.route === pathname;
-										if (!link.disable) {
+										if (!link.isDisable) {
 											const isActive = link.route === pathname;
 
 											return (
@@ -66,12 +62,12 @@ const MobileNav = () => {
 													className={`sidebar-nav_element group ${
 														isActive
 															? 'bg-purple-gradient text-custom-green'
-															: 'text-custom-brown'
+															: ''
 													}`}
 												>
 													<Link className='sidebar-link' href={link.route}>
 														<div className='flex items-center flex-1'>
-															<link.icon />
+															<link.icon color={link.color} />
 														</div>
 														{link.label}
 													</Link>
