@@ -26,13 +26,13 @@ export function ModeToggle() {
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align='end'>
 				<DropdownMenuItem onClick={() => setTheme('light')}>
-					<div data-testid='theme_mode_light'>Light</div>
+					<div data-testId='theme_mode_light'>Light</div>
 				</DropdownMenuItem>
 				<DropdownMenuItem onClick={() => setTheme('dark')}>
-					<div data-testid='theme_mode_dark'>Dark</div>
+					<div data-testId='theme_mode_dark'>Dark</div>
 				</DropdownMenuItem>
 				<DropdownMenuItem onClick={() => setTheme('system')}>
-					<div data-testid='theme_mode_system'>System</div>
+					<div data-testId='theme_mode_system'>System</div>
 				</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>

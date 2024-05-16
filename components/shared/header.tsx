@@ -3,48 +3,38 @@ import React from 'react';
 interface Props {
 	title: string;
 	subtitle?: string;
-	testid?: string;
+	testId?: string;
 	icon: string | JSX.Element;
 }
 
-const Header = ({ title, subtitle, testid, icon }: Props) => {
+const Header = ({ title, subtitle, testId, icon }: Props) => {
 	return (
 		<>
 			<div
+				data-testId={`${testId}_icon`}
+				className='text-5xl '
 				style={{
-					display: 'grid',
-					gridTemplateRows: 'auto auto',
-					gridTemplateColumns: 'auto 1fr',
-					gap: '10px',
+					gridColumn: '1',
+					gridRow: '1 / span 2',
+					display: 'flex',
 					justifyContent: 'space-evenly',
-					alignItems: 'space-evenly',
-					padding: '20px',
-					marginBottom: '20px',
 				}}
 			>
-				<div
-					data-testid={`${testid}_icon`}
-					className='text-5xl '
-					style={{
-						gridColumn: '1',
-						gridRow: '1 / span 2',
-						display: 'flex',
-						justifyContent: 'space-evenly',
-					}}
-				>
-					{icon}
-				</div>
+				{icon}
+			</div>
+			<div className='mb-8 space-y-4'>
 				<h2
-					data-testid={testid}
-					className='h2-bold'
+					data-testId={testId}
+					className='text-2x1 md:text-4xl font-bold text-center'
 					style={{ gridColumn: '2', gridRow: '1 ' }}
 				>
 					{title}
 				</h2>
 				{subtitle && (
 					<p
-						data-testid={`${testid}_subtitle`}
+						data-testId={`${testId}_subtitle`}
 						style={{ gridColumn: '2', gridRow: '2' }}
+						className='text-muted-foreground font-light text-sm md:text-lg text-center'
 					>
 						{subtitle}
 					</p>

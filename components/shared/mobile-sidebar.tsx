@@ -33,7 +33,7 @@ const MobileNav = () => {
 
 			<nav className='flex gap-2'>
 				<SignedIn>
-					<div data-testid='mode_toggle'>
+					<div data-testId='mode_toggle'>
 						<ModeToggle />
 					</div>
 					<UserButton afterSignOutUrl='/' />
@@ -82,7 +82,7 @@ const MobileNav = () => {
 				</SignedIn>
 
 				<SignedOut>
-					<div data-testid='mode_toggle'>
+					<div data-testId='mode_toggle'>
 						<ModeToggle />
 					</div>
 					<Button>

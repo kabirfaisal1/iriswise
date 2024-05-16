@@ -5,8 +5,8 @@ const ImageGenerationPage = () => {
 		<>
 			<Header
 				title='Image Generation Page title'
-				subtitle='Image Generation Page subtitle'
-				testid='ImageGeneration_page_header'
+				subtitle='Let your imagination run wild!'
+				testId='ImageGeneration_page_header'
 				icon=<ImageIcon color='pink' height={'60px'} width={'40px'} />
 			/>
 		</>

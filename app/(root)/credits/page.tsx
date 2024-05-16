@@ -7,7 +7,7 @@ const CreditsPage = () => {
 			<Header
 				title='User Credits'
 				subtitle='User Credits Page subtitle'
-				testid='User_Credits_page_header'
+				testId='User_Credits_page_header'
 				icon=<ScanBarcode color={'#76885B'} height={'60px'} width={'40px'} />
 			/>
 		</>

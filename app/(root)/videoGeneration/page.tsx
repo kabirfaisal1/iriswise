@@ -6,7 +6,7 @@ const VideoGenerationPage = () => {
 			<Header
 				title='Video Generation Page title'
 				subtitle='Video Generation Page subtitle'
-				testid='VideoGeneration_page_header'
+				testId='VideoGeneration_page_header'
 				icon=<VideoIcon color='#662549' height={'60px'} width={'40px'} />
 			/>
 		</>

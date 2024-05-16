@@ -7,7 +7,7 @@ const CodeSummarizePage = () => {
 			<Header
 				title='Code Summarize Page title'
 				subtitle='Code Summarize Page subtitle'
-				testid='CodeSummarize_page_header'
+				testId='CodeSummarize_page_header'
 				icon=<FileCode color={'#D8D8D8'} height={'60px'} width={'40px'} />
 			/>
 		</>

@@ -19,7 +19,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'react/prop-types': ['error', {
-      'ignore': ['data-testid', "testid"]
+      'ignore': ['data-testId', "testId"]
     }]
     ,
     quotes: ['error', 'single'],
