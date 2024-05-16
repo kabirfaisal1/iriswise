@@ -22,7 +22,7 @@ const Header = ({ title, subtitle, testid, icon }: Props) => {
 			>
 				{icon}
 			</div>
-			<div className='mb-8 space-y-4'>
+			<div data-testid={`${testid}_container`} className='mb-8 space-y-4'>
 				<h2
 					data-testid={testid}
 					className='text-2x1 md:text-4xl font-bold text-center'
