@@ -366,7 +366,7 @@ body :root {
 	}
 
 	.sidebar-nav_element {
-		@apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-green-100 hover:shadow-inner;
+		@apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-300 hover:shadow-inner;
 	}
 
 	.sidebar-link {

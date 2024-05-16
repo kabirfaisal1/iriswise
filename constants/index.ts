@@ -8,7 +8,7 @@ import
     VideoIcon,
     CodeIcon,
     SquareUser,
-    ScanBarcode
+    BadgeDollarSign
 } from 'lucide-react';
 
 export const navLinks = [
@@ -18,6 +18,7 @@ export const navLinks = [
         icon: LayoutDashboard,
         isDisable: false,
         color: "#5C8374",
+        background: "#BBC3A4",
     },
     {
         label: "Conversation",
@@ -25,6 +26,7 @@ export const navLinks = [
         icon: MessageSquare,
         isDisable: false,
         color: "#3EC70B",
+        background: "#D5F0C1",
     },
     {
         label: "Audio Generation",
@@ -32,6 +34,7 @@ export const navLinks = [
         icon: AudioLines,
         isDisable: false,
         color: "#7469B6",
+        background: "#E5D4FF",
     },
     {
         label: "Image Generation",
@@ -39,6 +42,7 @@ export const navLinks = [
         icon: ImageIcon,
         isDisable: false,
         color: "#F8B1A6",
+        background: "#FFDFDF",
     },
     {
         label: "Video Generation",
@@ -46,6 +50,7 @@ export const navLinks = [
         icon: VideoIcon,
         isDisable: false,
         color: "#662549",
+        background: "#D0A2F7",
     },
 
     {
@@ -54,13 +59,15 @@ export const navLinks = [
         icon: Newspaper,
         isDisable: false,
         color: "#005B41",
+        background: "#EAE0DA",
     },
     {
         label: "Code Generation",
         route: "/codeGeneration",
         icon: CodeIcon,
         isDisable: false,
-        color: "#D8D8D8",
+        color: "#5E454B",
+        background: "#EEEEEE",
     },
     {
         label: "Profile",
@@ -68,13 +75,15 @@ export const navLinks = [
         icon: SquareUser,
         isDisable: false,
         color: "#76549A",
+        background: "#ADA2FF",
     },
     {
         label: "Buy Credits",
         route: "/credits",
-        icon: ScanBarcode,
+        icon: BadgeDollarSign,
         isDisable: false,
-        color: "#76885B",
+        color: "#1A4D2E",
+        background: "#C6EBC5",
     },
 
 ];

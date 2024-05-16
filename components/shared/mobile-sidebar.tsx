@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 import { Menu } from 'lucide-react';
 import { ModeToggle, Button } from '@/components/index';
 import { useEffect, useState } from 'react';
-
+import { Avatar } from '@/components/ui/avatar';
 const MobileNav = () => {
 	const pathname = usePathname();
 	const [isMounted, setIsMounted] = useState(false);
@@ -66,12 +66,16 @@ const MobileNav = () => {
 													}`}
 												>
 													<Link className='sidebar-link' href={link.route}>
-														<div className='flex items-center flex-1'>
+														<Avatar
+															className='p-2 w-fit'
+															style={{ background: link.background }}
+														>
 															<link.icon color={link.color} />
-														</div>
+														</Avatar>
 														{link.label}
 													</Link>
 												</li>
+												// Testing
 											);
 										}
 									})}
