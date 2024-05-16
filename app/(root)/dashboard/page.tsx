@@ -19,7 +19,7 @@ const Dashboard = () => {
 			<Header
 				title='Explore the Power of AI'
 				subtitle=''
-				testId='dashboard_page_header'
+				testid='dashboard_page_header'
 				icon=<LayoutDashboard
 					color={'#5C8374'}
 					height={'60px'}
@@ -31,11 +31,11 @@ const Dashboard = () => {
 					{tools.map((tool, index) => (
 						<Card
 							key={`${index}_${tool.label}`}
-							data-testId={`dashboard_tool_cards`}
+							data-testid={`dashboard_tool_cards`}
 							className='flex flex-col items-center justify-center p-4 rounded-lg shadow-md'
 						>
 							<CardHeader>
-								<CardTitle testId={`card_title_${tool.label}`}>
+								<CardTitle testid={`card_title_${tool.label}`}>
 									{tool.label}
 								</CardTitle>
 								<CardDescription>Card Description</CardDescription>

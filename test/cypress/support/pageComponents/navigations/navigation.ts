@@ -2,10 +2,10 @@
 class NavigationBar
 {
     selectors = {
-        headerLogo: () => cy.get( '[data_testId="TDO"]' ),
-        headerTitle: () => cy.get( 'h1[data-testId="landing_header_title"]' ),
-        login: () => cy.get( '[data_testId="login_button"]' ),
-        register: () => cy.get( '[data_testId="register_button"]' ),
+        headerLogo: () => cy.get( '[data_testid="TDO"]' ),
+        headerTitle: () => cy.get( 'h1[data-testid="landing_header_title"]' ),
+        login: () => cy.get( '[data_testid="login_button"]' ),
+        register: () => cy.get( '[data_testid="register_button"]' ),
     };
     verifyLandingPage ()
     {

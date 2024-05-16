@@ -2,9 +2,9 @@
 class DashboardPO
 {
 	selectors = {
-		icon: () => cy.get( '[data-testId="dashboard_page_header_icon"]' ),
-		h2Title: () => cy.get( '[data-testId="dashboard_page_header"]' ),
-		subtitle: () => cy.get( '[data-testId="dashboard_page_header_subtitle"]' ),
+		icon: () => cy.get( '[data-testid="dashboard_page_header_icon"]' ),
+		h2Title: () => cy.get( '[data-testid="dashboard_page_header"]' ),
+		subtitle: () => cy.get( '[data-testid="dashboard_page_header_subtitle"]' ),
 	};
 	verifyDashboardHeader ( ...args: string[] )
 	{

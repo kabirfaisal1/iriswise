@@ -73,7 +73,7 @@ const Sidebar = () => {
 							})}
 
 							<li className='flex-center cursor-pointer gap-2 p-4'>
-								<div data-testId='mode_toggle'>
+								<div data-testid='mode_toggle'>
 									<ModeToggle />
 								</div>
 								<UserButton afterSignOutUrl='/' showName />
@@ -85,13 +85,13 @@ const Sidebar = () => {
 						<div className='text-sm flex p-3  mr-4 font-medium cursor-pointer'>
 							<UserButton afterSignOutUrl='/' />
 							<Link className='mr-4' href='/sign-in'>
-								<Button data_testId='login_button'>Login</Button>
+								<Button data_testid='login_button'>Login</Button>
 							</Link>
 
 							<Link className='mr-4' href='/sign-up'>
-								<Button data_testId='register_button'>Register</Button>
+								<Button data_testid='register_button'>Register</Button>
 							</Link>
-							<div data-testId='mode_toggle'>
+							<div data-testid='mode_toggle'>
 								<ModeToggle />
 							</div>
 						</div>

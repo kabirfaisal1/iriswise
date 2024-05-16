@@ -7,7 +7,7 @@ const ConversationPage = () => {
 			<Header
 				title='Conversation Page title'
 				subtitle='Chat with the smartest AI'
-				testId='Conversation_page_header'
+				testid='Conversation_page_header'
 				icon=<MessageSquare color='#3EC70B' height={'60px'} width={'40px'} />
 			/>
 		</>
