@@ -18,7 +18,7 @@ export const navLinks = [
         icon: LayoutDashboard,
         isDisable: false,
         color: "#5C8374",
-        background: "#BBC3A4",
+        bgColor: "#BBC3A4",
     },
     {
         label: "Conversation",
@@ -26,7 +26,7 @@ export const navLinks = [
         icon: MessageSquare,
         isDisable: false,
         color: "#3EC70B",
-        background: "#D5F0C1",
+        bgColor: "#D5F0C1",
     },
     {
         label: "Audio Generation",
@@ -34,7 +34,7 @@ export const navLinks = [
         icon: AudioLines,
         isDisable: false,
         color: "#7469B6",
-        background: "#E5D4FF",
+        bgColor: "#E5D4FF",
     },
     {
         label: "Image Generation",
@@ -42,7 +42,7 @@ export const navLinks = [
         icon: ImageIcon,
         isDisable: false,
         color: "#F8B1A6",
-        background: "#FFDFDF",
+        bgColor: "#FFDFDF",
     },
     {
         label: "Video Generation",
@@ -50,7 +50,7 @@ export const navLinks = [
         icon: VideoIcon,
         isDisable: false,
         color: "#662549",
-        background: "#D0A2F7",
+        bgColor: "#D0A2F7",
     },
 
     {
@@ -59,7 +59,7 @@ export const navLinks = [
         icon: Newspaper,
         isDisable: false,
         color: "#005B41",
-        background: "#EAE0DA",
+        bgColor: "#EAE0DA",
     },
     {
         label: "Code Generation",
@@ -67,7 +67,7 @@ export const navLinks = [
         icon: CodeIcon,
         isDisable: false,
         color: "#5E454B",
-        background: "#EEEEEE",
+        bgColor: "#EEEEEE",
     },
     {
         label: "Profile",
@@ -75,7 +75,7 @@ export const navLinks = [
         icon: SquareUser,
         isDisable: false,
         color: "#76549A",
-        background: "#ADA2FF",
+        bgColor: "#ADA2FF",
     },
     {
         label: "Buy Credits",
@@ -83,7 +83,7 @@ export const navLinks = [
         icon: BadgeDollarSign,
         isDisable: false,
         color: "#1A4D2E",
-        background: "#C6EBC5",
+        bgColor: "#C6EBC5",
     },
 
 ];
@@ -174,18 +174,18 @@ export const transformationTypes = {
         config: { restore: false },
         // icon: "image.svg",
     },
-    removeBackground: {
-        type: "removeBackground",
-        title: "Background Remove",
-        subTitle: "Removes the background of the image using AI",
-        config: { removeBackground: false },
+    removebgColor: {
+        type: "removebgColor",
+        title: "bgColor Remove",
+        subTitle: "Removes the bgColor of the image using AI",
+        config: { removebgColor: false },
         // icon: "camera.svg",
     },
     fill: {
         type: "fill",
         title: "Generative Fill",
         subTitle: "Enhance an image's dimensions using AI outpainting",
-        config: { fillBackground: false },
+        config: { fillbgColor: false },
         // icon: "stars.svg",
     },
     remove: {

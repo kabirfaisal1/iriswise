@@ -68,7 +68,7 @@ const MobileNav = () => {
 													<Link className='sidebar-link' href={link.route}>
 														<Avatar
 															className='p-2 w-fit'
-															style={{ background: link.background }}
+															style={{ background: link.bgColor }}
 														>
 															<link.icon color={link.color} />
 														</Avatar>
@@ -92,6 +92,9 @@ const MobileNav = () => {
 					<Button>
 						<Link href='/sign-in'>Login</Link>
 					</Button>
+					<Link className='mr-4' href='/sign-up'>
+						<Button data_testid='register_button'>Register</Button>
+					</Link>
 				</SignedOut>
 			</nav>
 		</header>
