@@ -1,9 +1,13 @@
 
 import MobileNav from '@/components/shared/mobile-sidebar';
 import Sidebar from '@/components/shared/sidebar';
+import Header from './shared/header';
 import { Button } from './ui/button';
 import { ModeToggle } from './ui/light_darkmode';
+import { Label } from './ui/label';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+
+
 import
 {
     Card,
@@ -47,6 +51,7 @@ import
 export
 {
     MobileNav, Sidebar, Table,
+    Header,
     TableHeader,
     TableBody,
     TableFooter,
@@ -80,4 +85,6 @@ export
     CardTitle,
     CardDescription,
     CardContent,
+
+    Label,
 };
