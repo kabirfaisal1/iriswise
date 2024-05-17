@@ -6,7 +6,7 @@ const AudioGenerationPage = () => {
 		<>
 			<Header
 				title='Audio Generation Page title'
-				subtitle='Audio Generation Page subtitle'
+				subtitle='Navigate the world of sound!'
 				testid='AudioGeneration_page_header'
 				icon=<AudioLines color='#7469B6' height={'60px'} width={'40px'} />
 			/>

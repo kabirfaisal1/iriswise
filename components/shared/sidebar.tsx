@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ModeToggle, Button } from '@/components/index';
+import { Avatar } from '@/components/ui/avatar';
 
 const Sidebar = () => {
 	const pathname = usePathname();
@@ -39,9 +40,12 @@ const Sidebar = () => {
 												}`}
 											>
 												<Link className='sidebar-link' href={link.route}>
-													<div className='flex items-center flex-1'>
+													<Avatar
+														className='p-2 w-fit'
+														style={{ background: link.bgColor }}
+													>
 														<link.icon color={link.color} />
-													</div>
+													</Avatar>
 													{link.label}
 												</Link>
 											</li>
@@ -63,9 +67,12 @@ const Sidebar = () => {
 										}`}
 									>
 										<Link className='sidebar-link' href={link.route}>
-											<div className='flex items-center flex-1'>
+											<Avatar
+												className='p-2 w-fit '
+												style={{ background: link.bgColor }}
+											>
 												<link.icon color={link.color} />
-											</div>
+											</Avatar>
 											{link.label}
 										</Link>
 									</li>
@@ -83,7 +90,6 @@ const Sidebar = () => {
 
 					<SignedOut>
 						<div className='text-sm flex p-3  mr-4 font-medium cursor-pointer'>
-							<UserButton afterSignOutUrl='/' />
 							<Link className='mr-4' href='/sign-in'>
 								<Button data_testid='login_button'>Login</Button>
 							</Link>

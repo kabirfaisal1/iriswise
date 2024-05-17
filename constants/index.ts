@@ -8,7 +8,7 @@ import
     VideoIcon,
     CodeIcon,
     SquareUser,
-    ScanBarcode
+    BadgeDollarSign
 } from 'lucide-react';
 
 export const navLinks = [
@@ -18,6 +18,7 @@ export const navLinks = [
         icon: LayoutDashboard,
         isDisable: false,
         color: "#5C8374",
+        bgColor: "#BBC3A4",
     },
     {
         label: "Conversation",
@@ -25,6 +26,7 @@ export const navLinks = [
         icon: MessageSquare,
         isDisable: false,
         color: "#3EC70B",
+        bgColor: "#D5F0C1",
     },
     {
         label: "Audio Generation",
@@ -32,6 +34,7 @@ export const navLinks = [
         icon: AudioLines,
         isDisable: false,
         color: "#7469B6",
+        bgColor: "#E5D4FF",
     },
     {
         label: "Image Generation",
@@ -39,6 +42,7 @@ export const navLinks = [
         icon: ImageIcon,
         isDisable: false,
         color: "#F8B1A6",
+        bgColor: "#FFDFDF",
     },
     {
         label: "Video Generation",
@@ -46,6 +50,7 @@ export const navLinks = [
         icon: VideoIcon,
         isDisable: false,
         color: "#662549",
+        bgColor: "#D0A2F7",
     },
 
     {
@@ -54,13 +59,15 @@ export const navLinks = [
         icon: Newspaper,
         isDisable: false,
         color: "#005B41",
+        bgColor: "#EAE0DA",
     },
     {
         label: "Code Generation",
         route: "/codeGeneration",
         icon: CodeIcon,
         isDisable: false,
-        color: "#D8D8D8",
+        color: "#5E454B",
+        bgColor: "#EEEEEE",
     },
     {
         label: "Profile",
@@ -68,13 +75,15 @@ export const navLinks = [
         icon: SquareUser,
         isDisable: false,
         color: "#76549A",
+        bgColor: "#ADA2FF",
     },
     {
         label: "Buy Credits",
         route: "/credits",
-        icon: ScanBarcode,
+        icon: BadgeDollarSign,
         isDisable: false,
-        color: "#76885B",
+        color: "#1A4D2E",
+        bgColor: "#C6EBC5",
     },
 
 ];
@@ -165,18 +174,18 @@ export const transformationTypes = {
         config: { restore: false },
         // icon: "image.svg",
     },
-    removeBackground: {
-        type: "removeBackground",
-        title: "Background Remove",
-        subTitle: "Removes the background of the image using AI",
-        config: { removeBackground: false },
+    removebgColor: {
+        type: "removebgColor",
+        title: "bgColor Remove",
+        subTitle: "Removes the bgColor of the image using AI",
+        config: { removebgColor: false },
         // icon: "camera.svg",
     },
     fill: {
         type: "fill",
         title: "Generative Fill",
         subTitle: "Enhance an image's dimensions using AI outpainting",
-        config: { fillBackground: false },
+        config: { fillbgColor: false },
         // icon: "stars.svg",
     },
     remove: {

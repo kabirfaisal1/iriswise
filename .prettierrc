@@ -13,7 +13,7 @@
   "endOfLine": "auto",
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx", "*.cy.ts"],
       "options": {
         "semi": true,
         "singleQuote": true,

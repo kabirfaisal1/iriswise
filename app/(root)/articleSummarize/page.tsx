@@ -6,7 +6,7 @@ const ArticleSummarize = () => {
 		<>
 			<Header
 				title='Article Summarize Page title'
-				subtitle='Article Summarize Page subtitle'
+				subtitle='Summarize articles in a jiffy!'
 				testid='ArticleSummarize_page_header'
 				icon=<Newspaper color={'#005B41'} height={'60px'} width={'40px'} />
 			/>

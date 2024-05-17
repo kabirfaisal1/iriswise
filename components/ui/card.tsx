@@ -31,14 +31,18 @@ CardHeader.displayName = 'CardHeader';
 
 const CardTitle = React.forwardRef<
 	HTMLParagraphElement,
-	React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => (
+	React.HTMLAttributes<HTMLHeadingElement> & {
+		testid?: string;
+		data_testid?: string;
+	} // Add the 'data_testid' property to the type definition
+>(({ className, testid, ...props }, ref) => (
 	<h3
 		ref={ref}
 		className={cn(
 			'text-2xl font-semibold leading-none tracking-tight',
 			className,
 		)}
+		data_testid={testid} // Add the 'data_testid' attribute to the element
 		{...props}
 	/>
 ));
