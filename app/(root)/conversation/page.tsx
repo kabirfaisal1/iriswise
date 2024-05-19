@@ -1,5 +1,5 @@
 'use client';
-import { Button, Header } from '@/components/index';
+import { BotAvatar, Button, Empty, Header, UserAvatar } from '@/components/index';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -11,6 +11,8 @@ import * as z from 'zod';
 
 import axios from 'axios';
 import { conversationSchema } from './constants';
+import Loader from '@/components/shared/loader';
+import { cn } from '@/lib/utils';
 type Message = {
 	role: string;
 	content: string;
@@ -59,7 +61,7 @@ const ConversationPage = () => {
 		<div>
 			{/* // Header component */}
 			<Header
-				title='Conversation Page title'
+				title='Conversation'
 				subtitle='Chat with the smartest AI'
 				testid='Conversation_page_header'
 				icon=<MessageSquare color='#3EC70B' height={'60px'} width={'40px'} />
@@ -99,16 +101,31 @@ const ConversationPage = () => {
 					</Form>
 				</div>
 
-				<div className='flex flex-col gap-3'>
-					{messages.map(message => (
-						<div key={message.content}>
-							<div className='summary_box'>
-								<p className='font-inter font-medium text-sm text-gray-700'>
-									{message.content}
-								</p>
-							</div>
+				<div className='space-y-4 mt-4'>
+					{isLoading && (
+						<div className='p-8 rounded-lg w-full flex items-center justify-center bg-muted'>
+							<Loader />
 						</div>
-					))}
+					)}
+					{messages.length === 0 && !isLoading && (
+						<Empty label='No conversation started' />
+					)}
+					<div className='flex flex-col-reverse gap-y-4'>
+						{messages.map(message => (
+							<div
+								key={message.content}
+								className={cn(
+									'p-8 w-full flex items-center gap-x-8 rounded-lg',
+									message.role === 'user'
+										? 'bg-white border border-black/10'
+										: 'bg-muted',
+								)}
+							>
+								{message.role === 'user' ? <UserAvatar /> : <BotAvatar />}
+								<p className='text-sm'>{message.content}</p>
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 		</div>
