@@ -176,3 +176,9 @@ export const deepMergeObjects = ( obj1: any, obj2: any ) =>
 
   return output;
 };
+
+// GET ABSOLUTE URL
+export function absoluteUrl ( path: string )
+{
+  return `${process.env.NEXT_PUBLIC_APP_URL}${path}`;
+}

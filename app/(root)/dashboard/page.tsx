@@ -1,9 +1,9 @@
 'use client';
 import Header from '@/components/shared/header';
-import { ArrowRight, LayoutDashboard } from 'lucide-react';
-import { navLinks } from '@/constants/index';
-import { Card, CardTitle } from '@/components/ui/card';
 import { Avatar } from '@/components/ui/avatar';
+import { Card, CardTitle } from '@/components/ui/card';
+import { navLinks } from '@/constants/index';
+import { ArrowRight, LayoutDashboard } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 const tools = navLinks

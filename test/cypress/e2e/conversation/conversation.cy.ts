@@ -11,7 +11,7 @@ describe( 'User Dashboard', () =>
         );
     } );
 
-    it( 'Verify Dashboard header', () =>
+    it( 'Verify Able to nev From sidebar', () =>
     {
         const title = 'Explore the Power of AI';
         Dashboard.verifyDashboardHeader( title );
