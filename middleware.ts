@@ -1,8 +1,7 @@
 import
 {
     clerkMiddleware,
-    createRouteMatcher,
-    ClerkMiddlewareAuth // Add this import statement
+    createRouteMatcher
 } from '@clerk/nextjs/server';
 import { navLinks } from './constants';
 

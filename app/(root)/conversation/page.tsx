@@ -4,12 +4,22 @@ import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { MessageSquare } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
+
+import axios from 'axios';
 import { conversationSchema } from './constants';
+type Message = {
+	role: string;
+	content: string;
+};
 
 const ConversationPage = () => {
-	// Form setup with zod validation
+	const router = useRouter();
+	const [messages, setMessages] = useState<Message[]>([]);
+
 	const form = useForm<z.infer<typeof conversationSchema>>({
 		resolver: zodResolver(conversationSchema),
 		defaultValues: {
@@ -17,12 +27,32 @@ const ConversationPage = () => {
 		},
 	});
 
-	// Loading state
 	const isLoading = form.formState.isSubmitting;
 
-	// Form submit function
-	const onSubmit = async (data: z.infer<typeof conversationSchema>) => {
-		console.log(data);
+	const onSubmit = async (values: z.infer<typeof conversationSchema>) => {
+		try {
+			const userMessage: Message = {
+				role: 'user',
+				content: values.prompt,
+			};
+
+			const newMessages = [...messages, userMessage];
+
+			const response = await axios.post('/api/conversation', {
+				messages: newMessages,
+			});
+
+			setMessages(prev => [...prev, userMessage, response.data]);
+
+			form.reset();
+		} catch (error: any) {
+			if (error?.response?.status === 403) {
+			} else {
+				console.error(error);
+			}
+		} finally {
+			router.refresh();
+		}
 	};
 
 	return (
@@ -68,10 +98,21 @@ const ConversationPage = () => {
 						</form>
 					</Form>
 				</div>
-				{/* // Messages component */}
-				<div className='p-8 space-y-4'> Messages component </div>
+
+				<div className='flex flex-col gap-3'>
+					{messages.map(message => (
+						<div key={message.content}>
+							<div className='summary_box'>
+								<p className='font-inter font-medium text-sm text-gray-700'>
+									{message.content}
+								</p>
+							</div>
+						</div>
+					))}
+				</div>
 			</div>
 		</div>
 	);
 };
+
 export default ConversationPage;

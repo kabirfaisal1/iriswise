@@ -6,6 +6,7 @@ import { Button } from './ui/button';
 import { ModeToggle } from './ui/light_darkmode';
 import { Label } from './ui/label';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import Textarea from './ui/textarea';
 
 
 import
@@ -85,6 +86,6 @@ export
     CardTitle,
     CardDescription,
     CardContent,
-
+    Textarea,
     Label,
 };
