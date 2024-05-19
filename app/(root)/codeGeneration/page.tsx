@@ -95,7 +95,7 @@ const CodeSummarizePage = () => {
 												className='border-10 outline-none focus-visible:ring-2 focus-visible:ring-transparent'
 												testid='conversation_input'
 												disabled={isLoading}
-												placeholder='What are the recognized species of Iris flowers?'
+												placeholder='Create a simple toggle button using React Hooks.'
 												{...field}
 											/>
 										</FormControl>
