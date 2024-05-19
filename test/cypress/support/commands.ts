@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import SignInPage from './pageComponents/sign_in/signinPage';
+import SignInPage from './pageComponents/sign_inPC/signinPage';
 const SignIn = new SignInPage();
 
 declare global
