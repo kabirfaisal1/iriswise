@@ -1,5 +1,11 @@
 'use client';
-import { BotAvatar, Button, Empty, Header, UserAvatar } from '@/components/index';
+import {
+	BotAvatar,
+	Button,
+	Empty,
+	Header,
+	UserAvatar,
+} from '@/components/index';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -94,6 +100,7 @@ const ConversationPage = () => {
 							<Button
 								className='col-span-12 lg:col-span-2 w-full'
 								disabled={isLoading}
+								data-testid='conversation_Generate'
 							>
 								Generate
 							</Button>
@@ -120,6 +127,7 @@ const ConversationPage = () => {
 										? 'bg-white border border-black/10'
 										: 'bg-muted',
 								)}
+								data-testid='conversation_message'
 							>
 								{message.role === 'user' ? <UserAvatar /> : <BotAvatar />}
 								<p className='text-sm'>{message.content}</p>

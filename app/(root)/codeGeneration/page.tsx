@@ -103,6 +103,7 @@ const CodeSummarizePage = () => {
 								)}
 							/>
 							<Button
+								data-testid='conversation_Generate'
 								className='col-span-12 lg:col-span-2 w-full'
 								disabled={isLoading}
 							>
@@ -131,6 +132,7 @@ const CodeSummarizePage = () => {
 										? 'bg-white border border-black/10'
 										: 'bg-muted',
 								)}
+								data-testid='code_message'
 							>
 								{message.role === 'user' ? <UserAvatar /> : <BotAvatar />}
 								<ReactMarkdown
@@ -139,6 +141,7 @@ const CodeSummarizePage = () => {
 											<div className='overflow-auto w-full my-2 bg-black/10 p-2 rounded-lg relative'>
 												<pre ref={preRef} {...props} />
 												<button
+													data-testid='code_copy_button'
 													onClick={copyToClipboard}
 													className='absolute top-5 right-5 h-10 w-20 hover:bg-accent hover:text-accent-foreground rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'
 												>
