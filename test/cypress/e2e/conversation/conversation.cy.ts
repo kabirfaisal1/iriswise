@@ -25,7 +25,7 @@ describe( 'User Conversation', () =>
         cy.dashboardNavigate( title );
         Conversation.verifyConversationHeader( title, subtitle );
     } );
-    it.only( 'Generate Message', () =>
+    it( 'Generate Message', () =>
     {
         const title = 'Conversation';
         const inputValue = 'how many galaxies in the universe';

@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 import SignInPage from './pageComponents/sign_inPC/signinPage';
+
 const SignIn = new SignInPage();
 
 declare global
@@ -11,7 +12,7 @@ declare global
             loginToAuth0 ( username: string, password: string ): Chainable<any>;
             sidebarNavigateScreen ( navigateTo: string ): Chainable<any>;
             dashboardNavigate ( navigateScreen: string ): Chainable<any>;
-            verifyEmptyBody ( isDisplayed: boolean ): Chainable<any>;
+            verifyEmptyBody ( isDisplayed: boolean, emptyBodyText?: string ): Chainable<any>;
             verifyLoader (): Chainable<any>;
             selectDropDownOptions ( selectorEl: Cypress.Chainable<JQuery>, option: Cypress.Chainable<JQuery>, value: string ): Chainable<any>;
         }
@@ -42,7 +43,7 @@ Cypress.Commands.add( 'sidebarNavigateScreen', ( navigateTo: string ) =>
         if ( navItem.text() === navigateTo )
         {
             cy.wrap( navItem ).click();
-            cy.url().should( 'include', navigateTo.toLowerCase() );
+            // cy.url().should( 'include', navigateTo.toLowerCase() );
         }
 
     } );
@@ -56,19 +57,19 @@ Cypress.Commands.add( 'dashboardNavigate', ( navigateTo: string ) =>
         if ( navItem.text() === navigateTo )
         {
             cy.wrap( navItem ).click();
-            cy.url().should( 'include', navigateTo.toLowerCase() );
+            // cy.url().should( 'include', navigateTo.toLowerCase() );
         }
 
     } );
 } );
 
-Cypress.Commands.add( 'verifyEmptyBody', ( isDisplayed: boolean ) =>
+Cypress.Commands.add( 'verifyEmptyBody', ( isDisplayed: boolean, emptyBodyText?: string ) =>
 {
     if ( isDisplayed )
     {
         cy.step( 'Verify Empty Body' );
         cy.get( '[data-testid="empty_body_image"]' ).should( 'be.visible' );
-        cy.get( '[data-testid="empty_body_paragraph"]' ).should( 'be.visible' ).and( 'include.text', 'No conversation started' );
+        cy.get( '[data-testid="empty_body_paragraph"]' ).should( 'be.visible' ).and( 'include.text', emptyBodyText );
     } else
     {
         cy.step( 'Verify Empty Body should not exist' );

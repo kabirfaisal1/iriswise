@@ -21,7 +21,7 @@ class ConversationPO
 		this.selectors.headerTitle().should( 'be.visible' ).and( 'include.text', pageTitle );
 		cy.step( 'Verify Conversation Header subtitle' );
 		this.selectors.headerSubtitle().should( 'be.visible' ).and( 'include.text', pageSubtitle );
-		cy.verifyEmptyBody( true );
+		cy.verifyEmptyBody( true, 'No conversation started' );
 
 	}
 
@@ -39,6 +39,7 @@ class ConversationPO
 		this.selectors
 			.conversation_generate()
 			.should( 'be.visible' ).click();
+		cy.step( 'Verify Message is loading' );
 		cy.verifyLoader();
 	}
 	verifyGenerateMessage ()
@@ -47,8 +48,7 @@ class ConversationPO
 		this.selectors
 			.conversation_generate()
 			.should( 'be.visible' ).click();
-		cy.step( 'Verify Message is loading' );
-		cy.verifyLoader();
+		cy.step( 'Verify empty body is not displayed' );
 		cy.verifyEmptyBody( false );
 		cy.step( 'Verify conversation message is displayed' );
 		this.selectors.conversation_message().should( 'be.visible' ).and( 'have.length', 2 );
