@@ -1,7 +1,7 @@
-import DashboardPO from '../../support/pageComponents/dashboardPC/dashboardPage';
-const Dashboard = new DashboardPO();
+import ConversationPO from '../../support/pageComponents/conversationPC/conversationPage';
+const Conversation = new ConversationPO();
 
-describe( 'User Dashboard', () =>
+describe( 'User Conversation', () =>
 {
     beforeEach( () =>
     {
@@ -13,29 +13,25 @@ describe( 'User Dashboard', () =>
 
     it( 'Verify Able to nev From sidebar', () =>
     {
-        const title = 'Explore the Power of AI';
-        Dashboard.verifyDashboardHeader( title );
+        const title = 'Conversation';
+        const subtitle = 'Chat with the smartest AI';
+        cy.sidebarNavigateScreen( title );
+        Conversation.verifyConversationHeader( title, subtitle );
     } );
-
-    it( 'Verify Tool Container', () =>
+    it( 'Verify Able to nev From dashboard', () =>
     {
-        const tools = {
-            conversation: 'Conversation',
-            audioGeneration: 'Audio Generation',
-            imageGeneration: 'Image Generation',
-            videoGeneration: 'Video Generation',
-            articleSummarizer: 'Article Summarizer',
-            profile: 'Profile',
-            buyCredits: 'Buy Credits',
-        };
-        Dashboard.VerifyToolContainer(
-            tools.conversation,
-            tools.audioGeneration,
-            tools.imageGeneration,
-            tools.videoGeneration,
-            tools.articleSummarizer,
-            tools.profile,
-            tools.buyCredits,
-        );
+        const title = 'Conversation';
+        const subtitle = 'Chat with the smartest AI';
+        cy.dashboardNavigate( title );
+        Conversation.verifyConversationHeader( title, subtitle );
+    } );
+    it.only( 'Generate Message', () =>
+    {
+        const title = 'Conversation';
+        const inputValue = 'how many galaxies in the universe';
+        cy.sidebarNavigateScreen( title );
+        Conversation.enterConversationInput( inputValue );
+        Conversation.verifyGenerateMessage();
+
     } );
 } );
