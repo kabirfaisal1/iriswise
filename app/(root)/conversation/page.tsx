@@ -69,7 +69,7 @@ const ConversationPage = () => {
 			<Header
 				title='Conversation'
 				subtitle='Chat with the smartest AI'
-				testid='Conversation_page_header'
+				testid='conversation_page_header'
 				icon=<MessageSquare color='#3EC70B' height={'60px'} width={'40px'} />
 			/>
 			{/* // Form component */}

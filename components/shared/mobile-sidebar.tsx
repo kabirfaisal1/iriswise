@@ -21,14 +21,9 @@ const MobileNav = () => {
 	if (!isMounted) return null;
 
 	return (
-		<header className='header'>
+		<header className='header' data-testid='mobile_view_navbar'>
 			<Link href='/' className='flex items-center gap-2 md:py-2'>
-				<Image
-					src='/logo.png'
-					alt='logo'
-					width={70}
-					height={28}
-				/>
+				<Image src='/logo.png' alt='logo' width={70} height={28} />
 			</Link>
 
 			<nav className='flex gap-2'>
@@ -44,12 +39,7 @@ const MobileNav = () => {
 						</SheetTrigger>
 						<SheetContent className='sheet-content sm:w-64' id='sheetContent'>
 							<>
-								<Image
-									src='/logo.png'
-									alt='logo'
-									width={52}
-									height={23}
-								/>
+								<Image src='/logo.png' alt='logo' width={52} height={23} />
 
 								<ul className='header-nav_elements'>
 									{navLinks.map(link => {

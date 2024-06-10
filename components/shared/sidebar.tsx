@@ -12,15 +12,10 @@ const Sidebar = () => {
 	const pathname = usePathname();
 
 	return (
-		<aside className='sidebar'>
+		<aside className='sidebar' data-testid='sidebar_nav'>
 			<div className='flex size-full flex-col gap-4'>
 				<Link href='/' className='sidebar-logo'>
-					<Image
-						src='/logo.png'
-						alt='logo'
-						width={180}
-						height={28}
-					/>
+					<Image src='/logo.png' alt='logo' width={180} height={28} />
 					{/* //TODO: Add text */}
 				</Link>
 
