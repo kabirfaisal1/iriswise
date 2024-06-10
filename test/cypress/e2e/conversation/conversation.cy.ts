@@ -31,6 +31,7 @@ describe( 'User Conversation', () =>
         const inputValue = 'how many galaxies in the universe';
         cy.sidebarNavigateScreen( title );
         Conversation.enterConversationInput( inputValue );
+        Conversation.clickConversationGenerate();
         Conversation.verifyGenerateMessage();
 
     } );

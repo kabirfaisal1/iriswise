@@ -31,6 +31,7 @@ describe( 'User Code', () =>
         const inputValue = 'a modal using react hook and talwind';
         cy.sidebarNavigateScreen( title );
         Code.enterCodeInput( inputValue );
+        Code.clickCodeGenerate();
         Code.verifyCodeGenerated();
 
     } );

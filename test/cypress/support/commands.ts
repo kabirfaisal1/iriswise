@@ -14,7 +14,7 @@ declare global
             dashboardNavigate ( navigateScreen: string ): Chainable<any>;
             verifyEmptyBody ( isDisplayed: boolean, emptyBodyText?: string ): Chainable<any>;
             verifyLoader (): Chainable<any>;
-            selectDropDownOptions ( selectorEl: Cypress.Chainable<JQuery>, option: Cypress.Chainable<JQuery>, value: string ): Chainable<any>;
+            selectDropDownOptions ( selectorEl: Cypress.Chainable<JQuery>, option: string ): Chainable<any>;
         }
     }
 }
@@ -86,18 +86,11 @@ Cypress.Commands.add( 'verifyLoader', () =>
     cy.get( '[data-testid="loader_paragraph"]' ).should( 'be.visible' ).and( 'include.text', 'Iris is thinking...' );
 } );
 
-Cypress.Commands.add( 'selectDropDownOptions', ( selectorEl, options, value ) =>
+Cypress.Commands.add( 'selectDropDownOptions', ( selectorEl, value ) =>
 {
 
-    cy.step( 'Click on DropDown button' );
-    selectorEl.click();
     cy.step( 'Select DropDown Options' );
-    options.each( ( option ) =>
-    {
-        if ( option.text() === value )
-        {
-            cy.wrap( option ).click();
-        }
-    } );
+    selectorEl
+        .select( value, { force: true } );
 
 } );

@@ -45,10 +45,6 @@ class codePO
 	}
 	verifyCodeGenerated ()
 	{
-		cy.step( 'Verify code is Generated' );
-		this.selectors
-			.code_generate()
-			.should( 'be.visible' ).click();
 		cy.step( 'Verify Empty body is not displayed' );
 		cy.verifyEmptyBody( false );
 		cy.step( 'Verify code code is displayed' );

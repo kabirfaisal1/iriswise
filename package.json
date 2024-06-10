@@ -6,7 +6,8 @@
     "dev": "next dev -p 5173",
     "build": "next build",
     "preview": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypressDashboard:local": "npx cypress open --env version='local' "
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.0.3",

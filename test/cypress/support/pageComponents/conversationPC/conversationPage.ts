@@ -44,10 +44,6 @@ class ConversationPO
 	}
 	verifyGenerateMessage ()
 	{
-		cy.step( 'Verify Message is Generated' );
-		this.selectors
-			.conversation_generate()
-			.should( 'be.visible' ).click();
 		cy.step( 'Verify empty body is not displayed' );
 		cy.verifyEmptyBody( false );
 		cy.step( 'Verify conversation message is displayed' );
