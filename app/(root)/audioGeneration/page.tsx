@@ -73,7 +73,7 @@ const AudioGenerationPage = () => {
 												className='border-10 outline-none focus-visible:ring-2 focus-visible:ring-transparent'
 												testid='audio_input'
 												disabled={isLoading}
-												placeholder='Funky Saxophone Solo'
+												placeholder='90`s rock'
 												{...field}
 											></Input>
 										</FormControl>
